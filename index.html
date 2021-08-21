@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="github.com/jmarcosg">
+    <meta name="description" content="Axie Infinity various tools">
+
+    <title>Axie Tools</title>
+
+    <!--icons-->
+    <link rel="icon" type="image/png" href="assets/img/axie_102x128.png">
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/calculator.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--script-->
+    <script src="assets/js/energyCalculator.js"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="calculator-container">
+            <div class="round-container">
+                <span class="round-info">Round</span><br>
+                <span id="roundNumber" class="round-number">1</span><br>
+                <img src="assets/img/energy.png">
+
+                <div class="energy-quantity">
+                    <span id="energyQuantity">3</span><span>/10</span>
+                </div>
+            </div>
+
+            <div class="ene-gain-loss-container">
+                <div class="eneCalc-item">
+                    <!-- <p>LOSE</p> -->
+                    <button onclick="subtract()">-</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <!-- <p>GAIN</p> -->
+                    <button onclick="add()">+</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="reset()">RESET</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="reset()">NEXT ROUND</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

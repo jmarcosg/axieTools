@@ -1,0 +1,9 @@
+html,
+body {
+  /* margin: 0 auto; */
+  font-family: "Roboto";
+  color: #ffc170;
+  scroll-behavior: smooth;
+
+  background: #2d1925;
+}
