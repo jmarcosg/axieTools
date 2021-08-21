@@ -1,9 +1,79 @@
 html,
 body {
-  /* margin: 0 auto; */
+  margin: 0 auto;
+  height: auto;
   font-family: "Roboto";
-  color: #ffc170;
-  scroll-behavior: smooth;
+  color: #462d17;
 
-  background: #2d1925;
+  background: #be9770;
+}
+
+/* Header */
+header {
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+
+  background-color: #ab6636;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+header a {
+  float: left;
+  color: #1e212d;
+  text-align: center;
+  padding: 18px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 8px;
+  border-radius: 4px;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+}
+
+header img:hover {
+  animation: pulse;
+  animation-duration: 1.15s;
+}
+
+.header-right a:hover {
+  background-color: rgba(238, 238, 238, 0.199);
+  color: #1e212d;
+}
+
+.header-right a.active {
+  background-color: #cf5959;
+  color: #fff;
+}
+
+.header-right {
+  float: right;
+}
+
+footer {
+  width: 100%;
+  margin-top: 200px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: center;
+
+  color: #000;
+}
+
+footer a {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  align-items: center;
+}
+
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+  color: #1e212d;
 }
