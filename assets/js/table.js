@@ -1,6 +1,8 @@
 function uncheckAll() {
-    document.querySelectorAll('input[type="checkbox"]')
-      .forEach(el => el.checked = false);
+      var uncheck=document.getElementsByTagName('input');
+      for(var i=0;i<uncheck.length;i++) {
+        if(uncheck[i].type=='checkbox') {
+          uncheck[i].checked=false;
+        }
+      }
   }
-  
-  document.querySelector('button').addEventListener('click', uncheckAll);
