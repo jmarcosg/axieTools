@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="github.com/jmarcosg">
-    <meta name="description" content="Varias herramientas para Axie Infinity">
+    <meta name="description" content="Axie Infinity various tools">
 
     <title>Axie Tools</title>
 
@@ -25,35 +25,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- script -->
-    <script src="assets/js/menu.js"></script>
 </head>
 
 <body>
     <div class="nav-bar">
         <header>
-            <div class="dropdown-menu">
-                <button onclick="showDropdownMenu()" class="dropbtn"><img src="assets/img/kotaro.png"></button>
+            <img src="assets/img/kotaro.png">
 
-                <div id="dropdownMenuItems" class="dropdown-menu-items">
-                    <a href="#" class="active"><i class="fas fa-home"></i>&nbsp;Inicio</a>
-                    <a href="assets/pages/ES/about.html"><i class="fas fa-info"></i>&nbsp;Como funciona</a>
-                    <a><i class="fas fa-envelope"></i>&nbsp;Contacto</a>
-                    <a><i class="fas fa-globe-americas"></i>&nbsp;Inglés</a>
-                </div>
+            <div class="header-right">
+                <a href="#" class="active">Home</a>
+                <a href="assets/pages/about.html">About</a>
             </div>
-
-            <!-- <div class="header-right">
-                <a href="#" class="active">Inicio</a>
-                <a href="assets/pages/ES/about.html">Acerca</a>
-            </div> -->
         </header>
     </div>
 
     <div class="calculator-container">
         <div class="round-container">
-            <span class="round-info">Ronda&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
+            <span class="round-info">Round&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
             <img src="assets/img/energy.png">
 
             <div class="energy-quantity">
@@ -73,11 +61,11 @@
             </div>
 
             <div class="eneCalc-item">
-                <button onclick="nextRound()">SIGUIENTE RONDA</button>
+                <button onclick="nextRound()">NEXT ROUND</button>
             </div>
 
             <div class="eneCalc-item">
-                <button onclick="reset()">NUEVA PARTIDA</button>
+                <button onclick="reset()">NEW GAME</button>
             </div>
         </div>
         <script src="assets/js/energyCalculator.js"></script>
@@ -87,30 +75,30 @@
         <table>
             <thead>
                 <tr>
-                    <th class="table-header">Parte</th>
-                    <th class="table-header">Primer Aparición</th>
-                    <th class="table-header">Segunda Aparición</th>
+                    <th class="table-header">Part</th>
+                    <th class="table-header">First Appearance</th>
+                    <th class="table-header">Second Appearance</th>
                 </tr>
             </thead>
             <tbody>
                 <div>
                     <tr>
-                        <td class="axie1">Boca</td>
+                        <td class="axie1">Mouth</td>
                         <td class="axie1"><input type="checkbox"></td>
                         <td class="axie1"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie1">Cuerno</td>
+                        <td class="axie1">Horn</td>
                         <td class="axie1"><input type="checkbox"></td>
                         <td class="axie1"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie1">Espalda</td>
+                        <td class="axie1">Back</td>
                         <td class="axie1"><input type="checkbox"></td>
                         <td class="axie1"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie1">Cola</td>
+                        <td class="axie1">Tail</td>
                         <td class="axie1"><input type="checkbox"></td>
                         <td class="axie1"><input type="checkbox"></td>
                     </tr>
@@ -118,22 +106,22 @@
 
                 <div>
                     <tr>
-                        <td class="axie2">Boca</td>
+                        <td class="axie2">Mouth</td>
                         <td class="axie2"><input type="checkbox"></td>
                         <td class="axie2"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Cuerno</td>
+                        <td class="axie2">Horn</td>
                         <td class="axie2"><input type="checkbox"></td>
                         <td class="axie2"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Espalda</td>
+                        <td class="axie2">Back</td>
                         <td class="axie2"><input type="checkbox"></td>
                         <td class="axie2"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Cola</td>
+                        <td class="axie2">Tail</td>
                         <td class="axie2"><input type="checkbox"></td>
                         <td class="axie2"><input type="checkbox"></td>
                     </tr>
@@ -141,22 +129,22 @@
 
                 <div>
                     <tr>
-                        <td class="axie3">Boca</td>
+                        <td class="axie3">Mouth</td>
                         <td class="axie3"><input type="checkbox"></td>
                         <td class="axie3"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Cuerno</td>
+                        <td class="axie3">Horn</td>
                         <td class="axie3"><input type="checkbox"></td>
                         <td class="axie3"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Espalda</td>
+                        <td class="axie3">Back</td>
                         <td class="axie3"><input type="checkbox"></td>
                         <td class="axie3"><input type="checkbox"></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Cola</td>
+                        <td class="axie3">Tail</td>
                         <td class="axie3"><input type="checkbox"></td>
                         <td class="axie3"><input type="checkbox"></td>
                     </tr>
@@ -165,7 +153,7 @@
         </table>
 
         <div class="clear-checkboxes">
-            <button onclick="uncheckAll()">MEZCLAR CARTAS</button>
+            <button onclick="uncheckAll()">CLEAR ALL</button>
             <script src="assets/js/table.js"></script>
         </div>
     </div>
