@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="github.com/jmarcosg">
+    <meta name="description" content="Axie Infinity various tools">
+
+    <title>Axie Tools</title>
+
+    <!--icons-->
+    <link rel="icon" type="image/png" href="../../img/axie_102x128.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <header>
+            <nav>
+                <div class="dropdown-menu">
+                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="../../img/kotaro.png"></button>
+
+                    <div id="dropdownMenuItems" class="dropdown-menu-items">
+                        <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+                        <a href="#" class="active"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;How it Works</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contact</a>
+                        <a href="../ES/about.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Switch to Spanish</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="TOC-container">
+        <p class="intro">
+            <span>
+                Tired of counting enemy energy? Want to know how to count cards? Axie Tools is a page where one can do all of this. This tool are perfect for lazy people like me who just want to see numbers on the screen and don't want to be chrunching numbers in game and just try to play my best :)
+            </span>
+        </p>
+        <div class="table-of-contents">
+            <h3><B>&nbsp;&nbsp;Table of Contents</B></h3>
+            <ul>
+                <li><a href="#howTo">How To</a></li>
+                <li><a href="#patchNotes">Patch Notes</a></li>
+            </ul>
+        </div>
+
+        <div class="how-to" id="howTo">
+            <p>
+            <h3>Enemy Energy Calculator</h3>
+            <span>
+                Enemy Energy Calculator is a tool you can use to track how much energy your enemy has for their next round with just a few clicks.
+            </span>
+            </p>
+
+            <p>
+            <h4>How it works</h4>
+            <span>You can see we have four buttons: <I>-1 ENE</I>, <I>+1 ENE</I>, <I>NEXT ROUND</I> and <I>RESET</I>.</span>
+            <ul>
+                <li><B>-1 ENE:&nbsp;</B>substracts 1 energy point from the available energy.</li>
+                <li><B>+1 ENE:&nbsp;</B>ads 1 energy point to the available energy.</li>
+                <li><B>NEXT ROUND:&nbsp;</B>acts as the game round has finished and adds 2 energy points to the available energy.</li>
+                <li><B>NEW GAME:&nbsp;</B>acts as a reset button for a new arena match.</li>
+            </ul>
+            </p>
+
+            <br>
+
+            <p>
+            <h3>Cards and Parts Table</h3>
+            <span>This table can be used to keep track which cards/axie parts' appeared clicking checkboxes.</span>
+            </p>
+
+            <p>
+            <h4>How it works</h4>
+            <span>Every time you start a game you are dealt six random cards from your 24 cards deck. As soon as a round starts you should be checking which cards have been dealt and clicking checkboxes in the table (any color can be used for your axies, it doesn't mean that if you have a double aquatic and bug composition you can't use this table). Collumns and rows will, eventually, get checked. When this happens, it means that your 24 cards deck is out of cards, so the game will now shuffle them back and will be a new set of cards. This also means that you should click the <I>CLEAR ALL</I> button so you can still keep track which cards/axie parts appears.</span>
+            </p>
+        </div>
+
+        <div class="patch-notes" id="patchNotes">
+            <h2>Patch Notes</h2>
+            <h3>AT 1.1</h3>
+            <ul>
+                <li>Website is now available in English and Spanish!</li>
+                <li>A contact page was added.</li>
+                <li>New colors and and funcionalities</li>
+                <ul>
+                    <li>Now you can click a cell from the Cards and Parts Table instead of a checkbox to check which card/part appeared.</li>
+                </ul>
+                <li>Grammar mistakes were fixed.</li>
+            </ul>
+
+            <h3>AT 1.0</h3>
+            <ul>
+                <li>Enemy Energy Calculator added.</li>
+                <li>Cards and Parts Table added.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            <i class="fab fa-github fa-lg"><a href="https://github.com/jmarcosg">&nbsp;Github</a></i>
+        </p>
+    </footer>
+</body>
+
+</html>
