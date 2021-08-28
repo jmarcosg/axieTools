@@ -1,3 +1,10 @@
+:root {
+  --raisinBlack: #262626;
+  --eerieBlack: #1c1c1c;
+  --orchidPink: #f2c3d0;
+  --palePink: #f5d5d5;
+}
+
 .calculator-container {
   width: auto;
   height: 210px;
@@ -56,14 +63,14 @@
   height: 30px;
   border-radius: 2px 2px 2px 2px;
 
-  background-color: #ab6636;
+  background-color: var(--raisinBlack);
   border-color: #1a150e;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .ene-gain-loss-container button:hover {
-  background-color: #d48750;
+  background-color: #cf5959;
   color: #fff;
 }
 

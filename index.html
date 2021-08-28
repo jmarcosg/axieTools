@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="github.com/jmarcosg">
-    <meta name="description" content="Axie Infinity various tools">
+    <meta name="description" content="Varias herramientas para Axie Infinity">
 
     <title>Axie Tools</title>
 
@@ -16,6 +16,7 @@
 
 
     <!--stylesheet-->
+    <!-- <link rel="stylesheet" href="assets/styles/styles.css"> -->
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="stylesheet" href="assets/styles/calculator.css">
     <link rel="stylesheet" href="assets/styles/table.css">
@@ -30,133 +31,140 @@
 <body>
     <div class="nav-bar">
         <header>
-            <img src="assets/img/kotaro.png">
+            <nav>
+                <div class="dropdown-menu">
+                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="assets/img/kotaro.png"></button>
 
-            <div class="header-right">
-                <a href="#" class="active">Home</a>
-                <a href="assets/pages/about.html">About</a>
-            </div>
+                    <div id="dropdownMenuItems" class="dropdown-menu-items">
+                        <a href="#" class="active"><i class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a>
+                        <a href="assets/pages/ES/about.html"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;Cómo funciona</a>
+                        <a href="assets/pages/ES/contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contacto</a>
+                        <a href="assets/pages/EN/index.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Cambiar a Inglés</a>
+                    </div>
+                </div>
+            </nav>
         </header>
     </div>
 
-    <div class="calculator-container">
-        <div class="round-container">
-            <span class="round-info">Round&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
-            <img src="assets/img/energy.png">
+    <div class="main-container">
+        <div class="calculator-container">
+            <div class="round-container">
+                <span class="round-info">Ronda&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
+                <img src="assets/img/energy.png">
 
-            <div class="energy-quantity">
-                <span id="energyQuantity">3</span><span>/10</span>
+                <div class="energy-quantity">
+                    <span id="energyQuantity">3</span><span>/10</span>
+                </div>
             </div>
+
+            <div class="ene-gain-loss-container">
+                <div class="eneCalc-item">
+                    <button onclick="subtract()">-1 ENE</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="add()">+1 ENE</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="nextRound()">SIGUIENTE RONDA</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="reset()">NUEVA PARTIDA</button>
+                </div>
+            </div>
+            <script src="assets/js/energyCalculator.js"></script>
         </div>
 
-        <div class="ene-gain-loss-container">
-            <div class="eneCalc-item">
-                <!-- <p>LOSE</p> -->
-                <button onclick="subtract()">-1 ENE</button>
-            </div>
+        <div class="cards-and-parts-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="table-header">Parte</th>
+                        <th class="table-header">Primer Aparición</th>
+                        <th class="table-header">Segunda Aparición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <tr>
+                            <td class="axie1">Boca</td>
+                            <td class="axie1" onclick="toggleA1M1()"><i class=" fas fa-times" id="a1m1"></i></td>
+                            <td class="axie1" onclick="toggleA1M2()"><i class="fas fa-times" id="a1m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Cuerno</td>
+                            <td class="axie1" onclick="toggleA1H1()"><i class=" fas fa-times" id="a1h1"></td>
+                            <td class="axie1" onclick="toggleA1H2()"><i class=" fas fa-times" id="a1h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Espalda</td>
+                            <td class="axie1" onclick="toggleA1B1()"><i class=" fas fa-times" id="a1b1"></td>
+                            <td class="axie1" onclick="toggleA1B2()"><i class=" fas fa-times" id="a1b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Cola</td>
+                            <td class="axie1" onclick="toggleA1T1()"><i class=" fas fa-times" id="a1t1"></td>
+                            <td class="axie1" onclick="toggleA1T2()"><i class=" fas fa-times" id="a1t2"></td>
+                        </tr>
+                    </div>
 
-            <div class="eneCalc-item">
-                <!-- <p>GAIN</p> -->
-                <button onclick="add()">+1 ENE</button>
-            </div>
+                    <div>
+                        <tr>
+                            <td class="axie2">Boca</td>
+                            <td class="axie2" onclick="toggleA2M1()"><i class=" fas fa-times" id="a2m1"></i></td>
+                            <td class="axie2" onclick="toggleA2M2()"><i class="fas fa-times" id="a2m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Cuerno</td>
+                            <td class="axie2" onclick="toggleA2H1()"><i class=" fas fa-times" id="a2h1"></td>
+                            <td class="axie2" onclick="toggleA2H2()"><i class=" fas fa-times" id="a2h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Espalda</td>
+                            <td class="axie2" onclick="toggleA2B1()"><i class=" fas fa-times" id="a2b1"></td>
+                            <td class="axie2" onclick="toggleA2B2()"><i class=" fas fa-times" id="a2b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Cola</td>
+                            <td class="axie2" onclick="toggleA2T1()"><i class=" fas fa-times" id="a2t1"></td>
+                            <td class="axie2" onclick="toggleA2T2()"><i class=" fas fa-times" id="a2t2"></td>
+                        </tr>
+                    </div>
 
-            <div class="eneCalc-item">
-                <button onclick="nextRound()">NEXT ROUND</button>
-            </div>
+                    <div>
+                        <tr>
+                            <td class="axie3">Boca</td>
+                            <td class="axie3" onclick="toggleA3M1()"><i class=" fas fa-times" id="a3m1"></i></td>
+                            <td class="axie3" onclick="toggleA3M2()"><i class="fas fa-times" id="a3m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Cuerno</td>
+                            <td class="axie3" onclick="toggleA3H1()"><i class=" fas fa-times" id="a3h1"></td>
+                            <td class="axie3" onclick="toggleA3H2()"><i class=" fas fa-times" id="a3h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Espalda</td>
+                            <td class="axie3" onclick="toggleA3B1()"><i class=" fas fa-times" id="a3b1"></td>
+                            <td class="axie3" onclick="toggleA3B2()"><i class=" fas fa-times" id="a3b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Cola</td>
+                            <td class="axie3" onclick="toggleA3T1()"><i class=" fas fa-times" id="a3t1"></td>
+                            <td class="axie3" onclick="toggleA3T2()"><i class=" fas fa-times" id="a3t2"></td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
 
-            <div class="eneCalc-item">
-                <button onclick="reset()">RESET</button>
+            <div class="clear-checkboxes">
+                <button onclick="uncheckAll()">MEZCLAR CARTAS</button>
+                <script src="assets/js/table.js"></script>
             </div>
         </div>
-        <script src="assets/js/energyCalculator.js"></script>
     </div>
 
-    <div class="cards-and-parts-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="table-header">Part</th>
-                    <th class="table-header">First Appearance</th>
-                    <th class="table-header">Second Appearance</th>
-                </tr>
-            </thead>
-            <tbody>
-                <div>
-                    <tr>
-                        <td class="axie1">Mouth</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie1">Horn</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie1">Back</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie1">Tail</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
-                    </tr>
-                </div>
-
-                <div>
-                    <tr>
-                        <td class="axie2">Mouth</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie2">Horn</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie2">Back</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie2">Tail</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
-                    </tr>
-                </div>
-
-                <div>
-                    <tr>
-                        <td class="axie3">Mouth</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie3">Horn</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie3">Back</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
-                    </tr>
-                    <tr>
-                        <td class="axie3">Tail</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
-                    </tr>
-                </div>
-            </tbody>
-        </table>
-
-        <div class="clear-checkboxes">
-            <button onclick="uncheckAll()">CLEAR ALL</button>
-            <script src="assets/js/table.js"></script>
-        </div>
-    </div>
 
     <footer>
         <p>

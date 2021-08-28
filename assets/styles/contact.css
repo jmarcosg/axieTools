@@ -1,0 +1,17 @@
+.contact {
+  margin-top: 15px;
+  margin: 0 auto;
+  width: 1380px;
+  font-family: "Roboto";
+  font-size: 18px;
+
+  color: #462d17;
+}
+
+.contact a:link,
+.contact a:visited,
+.contact a:hover,
+.contact a:active {
+  text-decoration: none;
+  color: #462d17;
+}
