@@ -1,0 +1,72 @@
+.calculator-container {
+  width: auto;
+  height: 210px;
+  margin: auto;
+  display: block;
+}
+
+/* Rounds */
+.round-container {
+  margin-top: 5px;
+  width: auto;
+  display: block;
+  text-align: center;
+}
+
+.round-info {
+  font-size: 2em;
+}
+
+.round-number {
+  font-size: 2em;
+  text-align: center;
+}
+
+.round-container img {
+  margin-top: 5px;
+  height: 60px;
+  width: 60px;
+}
+
+.energy-quantity {
+  margin-top: 5px;
+  font-size: 2em;
+}
+
+/* Gain-Loss */
+.ene-gain-loss-container {
+  margin-top: 8px;
+  margin: 0 auto;
+  width: auto;
+  display: block;
+  text-align: center;
+}
+
+.eneCalc-item {
+  padding: 6px;
+  display: inline-block;
+}
+.eneCalc-item p {
+  text-align: center;
+}
+
+.ene-gain-loss-container button {
+  min-width: 50px;
+  width: auto;
+  height: 30px;
+  border-radius: 2px 2px 2px 2px;
+
+  background-color: #ab6636;
+  border-color: #1a150e;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.ene-gain-loss-container button:hover {
+  background-color: #d48750;
+  color: #fff;
+}
+
+.gain-container {
+  margin: 0 auto;
+}
