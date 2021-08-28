@@ -67,18 +67,6 @@ header {
   display: block;
 }
 
-/* header a {
-  float: left;
-  color: #1e212d;
-  text-align: center;
-  padding: 18px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 8px;
-  border-radius: 4px;
-}  */
-
 header img {
   height: 45px;
   width: 45px;
@@ -88,16 +76,6 @@ header img:hover {
   animation: pulse;
   animation-duration: 1.15s;
 }
-
-/* .header-right a:hover {
-  background-color: rgba(238, 238, 238, 0.199);
-  color: #1e212d;
-}
-
-.header-right a.active {
-  background-color: #cf5959;
-  color: #fff;
-} */
 
 footer {
   padding-top: 15px;
