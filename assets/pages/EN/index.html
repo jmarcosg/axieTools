@@ -11,14 +11,14 @@
     <title>Axie Tools</title>
 
     <!--icons-->
-    <link rel="icon" type="image/png" href="assets/img/axie_102x128.png">
+    <link rel="icon" type="image/png" href="../../img/axie_102x128.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 
     <!--stylesheet-->
-    <link rel="stylesheet" href="assets/styles/styles.css">
-    <link rel="stylesheet" href="assets/styles/calculator.css">
-    <link rel="stylesheet" href="assets/styles/table.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/calculator.css">
+    <link rel="stylesheet" href="../../styles/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!--font-->
@@ -30,19 +30,25 @@
 <body>
     <div class="nav-bar">
         <header>
-            <img src="assets/img/kotaro.png">
+            <nav>
+                <div class="dropdown-menu">
+                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="../../img/kotaro.png"></button>
 
-            <div class="header-right">
-                <a href="#" class="active">Home</a>
-                <a href="assets/pages/about.html">About</a>
-            </div>
+                    <div id="dropdownMenuItems" class="dropdown-menu-items">
+                        <a href="#" class="active"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+                        <a href="about.html"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;How it works</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contact</a>
+                        <a href="../../../index.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Switch to Spanish</a>
+                    </div>
+                </div>
+            </nav>
         </header>
     </div>
 
     <div class="calculator-container">
         <div class="round-container">
             <span class="round-info">Round&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
-            <img src="assets/img/energy.png">
+            <img src="../../img/energy.png">
 
             <div class="energy-quantity">
                 <span id="energyQuantity">3</span><span>/10</span>
@@ -84,76 +90,76 @@
                 <div>
                     <tr>
                         <td class="axie1">Mouth</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
+                        <td class="axie1" onclick="toggleA1M1()"><i class=" fas fa-times" id="a1m1"></i></td>
+                        <td class="axie1" onclick="toggleA1M2()"><i class="fas fa-times" id="a1m2"></i></td>
                     </tr>
                     <tr>
                         <td class="axie1">Horn</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
+                        <td class="axie1" onclick="toggleA1H1()"><i class=" fas fa-times" id="a1h1"></td>
+                        <td class="axie1" onclick="toggleA1H2()"><i class=" fas fa-times" id="a1h2"></td>
                     </tr>
                     <tr>
                         <td class="axie1">Back</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
+                        <td class="axie1" onclick="toggleA1B1()"><i class=" fas fa-times" id="a1b1"></td>
+                        <td class="axie1" onclick="toggleA1B2()"><i class=" fas fa-times" id="a1b2"></td>
                     </tr>
                     <tr>
                         <td class="axie1">Tail</td>
-                        <td class="axie1"><input type="checkbox"></td>
-                        <td class="axie1"><input type="checkbox"></td>
+                        <td class="axie1" onclick="toggleA1T1()"><i class=" fas fa-times" id="a1t1"></td>
+                        <td class="axie1" onclick="toggleA1T2()"><i class=" fas fa-times" id="a1t2"></td>
                     </tr>
                 </div>
 
                 <div>
                     <tr>
                         <td class="axie2">Mouth</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
+                        <td class="axie2" onclick="toggleA2M1()"><i class=" fas fa-times" id="a2m1"></i></td>
+                        <td class="axie2" onclick="toggleA2M2()"><i class="fas fa-times" id="a2m2"></i></td>
                     </tr>
                     <tr>
                         <td class="axie2">Horn</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
+                        <td class="axie2" onclick="toggleA2H1()"><i class=" fas fa-times" id="a2h1"></td>
+                        <td class="axie2" onclick="toggleA2H2()"><i class=" fas fa-times" id="a2h2"></td>
                     </tr>
                     <tr>
                         <td class="axie2">Back</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
+                        <td class="axie2" onclick="toggleA2B1()"><i class=" fas fa-times" id="a2b1"></td>
+                        <td class="axie2" onclick="toggleA2B2()"><i class=" fas fa-times" id="a2b2"></td>
                     </tr>
                     <tr>
                         <td class="axie2">Tail</td>
-                        <td class="axie2"><input type="checkbox"></td>
-                        <td class="axie2"><input type="checkbox"></td>
+                        <td class="axie2" onclick="toggleA2T1()"><i class=" fas fa-times" id="a2t1"></td>
+                        <td class="axie2" onclick="toggleA2T2()"><i class=" fas fa-times" id="a2t2"></td>
                     </tr>
                 </div>
 
                 <div>
                     <tr>
                         <td class="axie3">Mouth</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
+                        <td class="axie3" onclick="toggleA3M1()"><i class=" fas fa-times" id="a3m1"></i></td>
+                        <td class="axie3" onclick="toggleA3M2()"><i class="fas fa-times" id="a3m2"></i></td>
                     </tr>
                     <tr>
                         <td class="axie3">Horn</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
+                        <td class="axie3" onclick="toggleA3H1()"><i class=" fas fa-times" id="a3h1"></td>
+                        <td class="axie3" onclick="toggleA3H2()"><i class=" fas fa-times" id="a3h2"></td>
                     </tr>
                     <tr>
                         <td class="axie3">Back</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
+                        <td class="axie3" onclick="toggleA3B1()"><i class=" fas fa-times" id="a3b1"></td>
+                        <td class="axie3" onclick="toggleA3B2()"><i class=" fas fa-times" id="a3b2"></td>
                     </tr>
                     <tr>
                         <td class="axie3">Tail</td>
-                        <td class="axie3"><input type="checkbox"></td>
-                        <td class="axie3"><input type="checkbox"></td>
+                        <td class="axie3" onclick="toggleA3T1()"><i class=" fas fa-times" id="a3t1"></td>
+                        <td class="axie3" onclick="toggleA3T2()"><i class=" fas fa-times" id="a3t2"></td>
                     </tr>
                 </div>
             </tbody>
         </table>
 
         <div class="clear-checkboxes">
-            <button onclick="uncheckAll()">CLEAR ALL</button>
+            <button onclick="uncheckAll()">SHUFFLE CARDS</button>
             <script src="assets/js/table.js"></script>
         </div>
     </div>

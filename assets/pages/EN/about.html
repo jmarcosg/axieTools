@@ -11,13 +11,13 @@
     <title>Axie Tools</title>
 
     <!--icons-->
-    <link rel="icon" type="image/png" href="../img/axie_102x128.png">
+    <link rel="icon" type="image/png" href="../../img/axie_102x128.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 
     <!--stylesheet-->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!--font-->
@@ -29,24 +29,29 @@
 <body>
     <div class="nav-bar">
         <header>
-            <img src="../img/kotaro.png" class="logo">
+            <nav>
+                <div class="dropdown-menu">
+                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="../../img/kotaro.png"></button>
 
-
-            <div class="header-right">
-                <a href="../../index.html">Home</a>
-                <a href="#" class="active">About</a>
-            </div>
+                    <div id="dropdownMenuItems" class="dropdown-menu-items">
+                        <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+                        <a href="#" class="active"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;How it Works</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contact</a>
+                        <a href="../ES/about.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Switch to Spanish</a>
+                    </div>
+                </div>
+            </nav>
         </header>
     </div>
 
     <div class="TOC-container">
         <p class="intro">
             <span>
-                Tired of counting enemy energy? Want to know how to count cards? Axie Tools is a page where one can do all of this. This is perfect for lazy people like me who just want to see numbers on the screen and don't want to be chrunching numbers in game and just try to play my best :)
+                Tired of counting enemy energy? Want to know how to count cards? Axie Tools is a page where one can do all of this. This tool are perfect for lazy people like me who just want to see numbers on the screen and don't want to be chrunching numbers in game and just try to play my best :)
             </span>
         </p>
         <div class="table-of-contents">
-            <h3><B>Table of Contents</B></h3>
+            <h3><B>&nbsp;&nbsp;Table of Contents</B></h3>
             <ul>
                 <li><a href="#howTo">How To</a></li>
                 <li><a href="#patchNotes">Patch Notes</a></li>
@@ -54,7 +59,6 @@
         </div>
 
         <div class="how-to" id="howTo">
-            <h2>Axie Tools</h2>
             <p>
             <h3>Enemy Energy Calculator</h3>
             <span>
@@ -69,9 +73,11 @@
                 <li><B>-1 ENE:&nbsp;</B>substracts 1 energy point from the available energy.</li>
                 <li><B>+1 ENE:&nbsp;</B>ads 1 energy point to the available energy.</li>
                 <li><B>NEXT ROUND:&nbsp;</B>acts as the game round has finished and adds 2 energy points to the available energy.</li>
-                <li><B>RESET:&nbsp;</B>acts as a reset button for a new arena match.</li>
+                <li><B>NEW GAME:&nbsp;</B>acts as a reset button for a new arena match.</li>
             </ul>
             </p>
+
+            <br>
 
             <p>
             <h3>Cards and Parts Table</h3>
@@ -86,22 +92,23 @@
 
         <div class="patch-notes" id="patchNotes">
             <h2>Patch Notes</h2>
+            <h3>AT 1.1</h3>
+            <ul>
+                <li>Website is now available in English and Spanish!</li>
+                <li>A contact page was added.</li>
+                <li>New colors and and funcionalities</li>
+                <ul>
+                    <li>Now you can click a cell from the Cards and Parts Table instead of a checkbox to check which card/part appeared.</li>
+                </ul>
+                <li>Grammar mistakes were fixed.</li>
+            </ul>
+
             <h3>AT 1.0</h3>
             <ul>
-                <li>Enemy energy calculator added</li>
-                <li>Axie part's card appearance table added</li>
+                <li>Enemy Energy Calculator added.</li>
+                <li>Cards and Parts Table added.</li>
             </ul>
         </div>
-    </div>
-
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>
-            <span>This tools were built as a way to learn the game and ease the difficulty slope we are presented once we start the game.</span>
-        </p>
-        <p>
-            <span>Want to help? Perfect! I'm still learning the game and how to build better websites, send me a message in any of my social media platforms on display in my Github profile.</span>
-        </p>
     </div>
 
     <footer>

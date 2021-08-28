@@ -29,79 +29,86 @@
 <body>
     <div class="nav-bar">
         <header>
-            <img src="../../img/kotaro.png" class="logo">
+            <nav>
+                <div class="dropdown-menu">
+                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="../../img/kotaro.png"></button>
 
-
-            <div class="header-right">
-                <a href="../../../index.html">Home</a>
-                <a href="#" class="active">About</a>
-            </div>
+                    <div id="dropdownMenuItems" class="dropdown-menu-items">
+                        <a href="../../../index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a>
+                        <a href="#" class="active"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;Cómo funciona</a>
+                        <a href="contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contacto</a>
+                        <a href="../EN/about.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Cambiar a Inglés</a>
+                    </div>
+                </div>
+            </nav>
         </header>
     </div>
 
     <div class="TOC-container">
         <p class="intro">
             <span>
-                Tired of counting enemy energy? Want to know how to count cards? Axie Tools is a page where one can do all of this. This is perfect for lazy people like me who just want to see numbers on the screen and don't want to be chrunching numbers in game and just try to play my best :)
+                ¿Te cansas o te cuesta contar las energías de tu contricante? ¿Querés aprender a contar cartas? Axie Tools es una página donde uno puede hacer todo ésto. Éstas herramientas son perfectas para gente perezosa como yo que solo queremos ver números en la pantalla y no queremos estar constantemente sacando cuentas en medio de una partida y tratar de jugar lo mejor posible :)
             </span>
         </p>
         <div class="table-of-contents">
-            <h3><B>Table of Contents</B></h3>
+            <h3><B>&nbsp;&nbsp;Tabla de Contenido</B></h3>
             <ul>
-                <li><a href="#howTo">How To</a></li>
-                <li><a href="#patchNotes">Patch Notes</a></li>
+                <li><a href="#howTo">Cómo se usa</a></li>
+                <li><a href="#patchNotes">Notas de Parche</a></li>
             </ul>
         </div>
 
         <div class="how-to" id="howTo">
-            <h2>Axie Tools</h2>
             <p>
-            <h3>Enemy Energy Calculator</h3>
+            <h3>Calculadora de energía</h3>
             <span>
-                Enemy Energy Calculator is a tool you can use to track how much energy your enemy has for their next round with just a few clicks.
+                La calculadora de energía de enemigos es una herramienta que se puede utilizar para ver y calcular cuanta energía tienen con solo unos clicks.
             </span>
             </p>
 
             <p>
-            <h4>How it works</h4>
-            <span>You can see we have four buttons: <I>-1 ENE</I>, <I>+1 ENE</I>, <I>NEXT ROUND</I> and <I>RESET</I>.</span>
+            <h4>Cómo funciona</h4>
+            <span>Podrás ver que hay cuatro botones: <I>-1 ENE</I>, <I>+1 ENE</I>, <I>SIGUIENTE RONDA</I> and <I>NUEVA PARTIDA</I>.</span>
             <ul>
-                <li><B>-1 ENE:&nbsp;</B>substracts 1 energy point from the available energy.</li>
-                <li><B>+1 ENE:&nbsp;</B>ads 1 energy point to the available energy.</li>
-                <li><B>NEXT ROUND:&nbsp;</B>acts as the game round has finished and adds 2 energy points to the available energy.</li>
-                <li><B>RESET:&nbsp;</B>acts as a reset button for a new arena match.</li>
+                <li><B>-1 ENE:&nbsp;</B>resta 1 punto de energía de la energía disponible.</li>
+                <li><B>+1 ENE:&nbsp;</B>suma 1 punto de energía a la energía disponible.</li>
+                <li><B>SIGUIENTE RONDA:&nbsp;</B>funciona como si la ronda de la partida hubiese terminado y agrega 2 puntos de energía a la energía disponible.</li>
+                <li><B>NUEVA PARTIDA:&nbsp;</B>funciona como un botón de reset para una nueva partida y comenzar de 0.</li>
             </ul>
             </p>
 
+            <br>
+
             <p>
-            <h3>Cards and Parts Table</h3>
-            <span>This table can be used to keep track which cards/axie parts' appeared clicking checkboxes.</span>
+            <h3>Tabla de Cartas y Partes</h3>
+            <span>Ésta tabla puede ser utilizada para hacer un seguimiento de las que cartas/partes que van apareciendo en la partida.</span>
             </p>
 
             <p>
-            <h4>How it works</h4>
-            <span>Every time you start a game you are dealt six random cards from your 24 cards deck. As soon as a round starts you should be checking which cards have been dealt and clicking checkboxes in the table (any color can be used for your axies, it doesn't mean that if you have a double aquatic and bug composition you can't use this table). Collumns and rows will, eventually, get checked. When this happens, it means that your 24 cards deck is out of cards, so the game will now shuffle them back and will be a new set of cards. This also means that you should click the <I>CLEAR ALL</I> button so you can still keep track which cards/axie parts appears.</span>
+            <h4>Cómo funciona</h4>
+            <span>Cada vez que inicias una nueva partida se te reparten seis cartas aleatorias de tu mazo de 24 cartas. Cuando la ronda comience deberías marcar en la tabla cuales fueron las cartas que te tocaron (podés utilizar cualquiera de los colores para tus axies, ésto no significa que si tu composición de equipo es doble pez y una planta no puedas utilizarla). Las columnas y filas, eventualmente, se van llenar. Cuando ésto ocurra significa que te quedaste sin cartas en tu mazo y el juego se va a engargar de mezclarlas y repartirte nuevas cartas. Es en éste preciso momento que deberías hacer click en el botón de <I>MEZCLAR CARTAS</I> para que se limpie la tabla y volver a marcar las cartas/partes que vayan apareciendo.</span>
             </p>
         </div>
 
         <div class="patch-notes" id="patchNotes">
-            <h2>Patch Notes</h2>
+            <h2>Notas de Parche</h2>
+            <h3>AT 1.1</h3>
+            <ul>
+                <li>¡La página ahora esta disponible en Español e Inglés!</li>
+                <li>Se agregó una página de contacto.</li>
+                <li>Nuevos colores y funcionalidades.</li>
+                <ul>
+                    <li>Ahora podes clickear una celda de la Tabla de Partes y Cartas para marcar que carta/parte apareció.</li>
+                </ul>
+                <li>Se corrigieron errores gramaticales en ambos idiomas.</li>
+            </ul>
+
             <h3>AT 1.0</h3>
             <ul>
-                <li>Enemy energy calculator added</li>
-                <li>Axie part's card appearance table added</li>
+                <li>Se agregó la Calculadora de Energía de Enemigos.</li>
+                <li>Se agregó la Tabla de Partes y Cartas.</li>
             </ul>
         </div>
-    </div>
-
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>
-            <span>This tools were built as a way to learn the game and ease the difficulty slope we are presented once we start the game.</span>
-        </p>
-        <p>
-            <span>Want to help? Perfect! I'm still learning the game and how to build better websites, send me a message in any of my social media platforms on display in my Github profile.</span>
-        </p>
     </div>
 
     <footer>
