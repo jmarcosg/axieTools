@@ -11,12 +11,11 @@
     <title>Axie Tools</title>
 
     <!--icons-->
-    <link rel="icon" type="image/png" href="assets/img/axie_102x128.png">
+    <link rel="icon" type="image/png" href="assets/img/kotaro.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
 
     <!--stylesheet-->
-    <!-- <link rel="stylesheet" href="assets/styles/styles.css"> -->
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="stylesheet" href="assets/styles/calculator.css">
     <link rel="stylesheet" href="assets/styles/table.css">
@@ -30,21 +29,21 @@
 
 <body onload="uncheckAll()">
     <div class="nav-bar">
-        <header>
-            <nav>
-                <div class="dropdown-menu">
-                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="assets/img/kotaro.png"></button>
-
-                    <div id="dropdownMenuItems" class="dropdown-menu-items">
-                        <a href="#" class="active"><i class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a>
-                        <a href="assets/pages/ES/about.html"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;Cómo funciona</a>
-                        <a href="assets/pages/ES/contact.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contacto</a>
-                        <a href="assets/pages/EN/index.html"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;Cambiar a Inglés</a>
-                        <a href="assets/pages/ES/v1.0/index.html"><i class="fas fa-undo">&nbsp;&nbsp;Tema original</i></a>
-                    </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Inicio</a>
+            <a href="assets/pages/ES/about.html">Cómo funciona</a>
+            <a href="assets/pages/ES/contact.html">Contacto</a>
+            <div class="dropdown">
+                <button class="dropbtn">Opciones
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="assets/pages/EN/index.html">Cambiar a Inglés</a>
                 </div>
-            </nav>
-        </header>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <script src="assets/js/menu.js"></script>
+        </div>
     </div>
 
     <div class="main-container">
