@@ -1,10 +1,3 @@
-:root {
-  --raisinBlack: #262626;
-  --eerieBlack: #1c1c1c;
-  --orchidPink: #f2c3d0;
-  --palePink: #f5d5d5;
-}
-
 .cards-and-parts-container table {
   margin: auto;
   border-collapse: collapse;
@@ -14,7 +7,7 @@
 }
 
 th {
-  background-color: var(--raisinBlack);
+  background-color: #ab6636;
   color: #fff;
   font-weight: 400;
   border: 1px solid #000;
@@ -23,8 +16,8 @@ th {
 
 /* Axie 1 */
 .axie1 {
-  background-color: #c8e9a0;
-  color: var(--eerieBlack);
+  background-color: #f0c66e;
+  color: #000000;
   border: 1px solid #000;
   padding: 8px;
   font-weight: 500;
@@ -77,8 +70,8 @@ th {
 
 /* Axie 2 */
 .axie2 {
-  background-color: #f7a238;
-  color: var(--eerieBlack);
+  background-color: #ff9ab8;
+  color: #000000;
   border: 1px solid #000;
   padding: 8px;
   font-weight: 500;
@@ -126,8 +119,8 @@ th {
 
 /* Axie 3*/
 .axie3 {
-  background-color: #a13d63;
-  color: var(--eerieBlack);
+  background-color: #5cbfea;
+  color: #000000;
   border: 1px solid #000;
   padding: 8px;
   font-weight: 500;
@@ -185,13 +178,13 @@ th {
   height: 30px;
   border-radius: 2px 2px 2px 2px;
 
-  background-color: var(--raisinBlack);
+  background-color: #ab6636;
   border-color: #1a150e;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .clear-checkboxes button:hover {
-  background-color: #cf5959;
+  background-color: #bd7847;
   color: #fff;
 }

@@ -28,21 +28,21 @@
 
 <body>
     <div class="nav-bar">
-        <header>
-            <nav>
-                <div class="dropdown-menu">
-                    <button onclick="showDropdownMenu()" class="dropbtn"><img src="../../img/kotaro.png"></button>
-
-                    <div id="dropdownMenuItems" class="dropdown-menu-items">
-                        <a href="../../../index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Inicio</a>
-                        <a href="about.html"><i class="fas fa-question-circle"></i>&nbsp;&nbsp;Cómo funciona</a>
-                        <a href="#" class="active"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contacto</a>
-                        <a href="../EN/contact.html"><i class="fas fa-language"></i></i>&nbsp;&nbsp;Cambiar a Inglés</a>
-                        <a href="v1.0/contact.html"><i class="fas fa-undo">&nbsp;&nbsp;Tema original</i></a>
-                    </div>
+        <div class="topnav" id="myTopnav">
+            <a href="../../../index.html">Inicio</a>
+            <a href="about.html">Cómo funciona</a>
+            <a href="#" class="active">Contacto</a>
+            <div class="dropdown">
+                <button class="dropbtn">Opciones
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../EN/contact.html">Cambiar a Inglés</a>
                 </div>
-            </nav>
-        </header>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <script src="../../js/menu.js"></script>
+        </div>
     </div>
 
     <div class="contact">
@@ -50,17 +50,22 @@
         <p>
             <span>Estas herramientas fueron hechas como una manera de ayudar a aprender partes claves del juego y bajar un poco la curva de dificultad que se nos presenta al iniciar el juego por primera vez.</span>
         </p>
+
         <p>
             <span>¿Querés ayudar? ¡Perfecto! Estoy en continuo aprendizaje del juego y cómo construir páginas web. No dudes en enviarme un mensaje a través de cualquiera de mis redes sociales que hay en <a href="https://github.com/jmarcosg">mi perfil de Github</a>.</span>
         </p>
+    </div>
 
+    <div class="tips">
         <h2>Donaciones</h2>
-        <span>Tanto las donaciones de Ronin como las de Cafecito <B>NO SON OBGLIGATORIAS</B> y <B>NUNCA</B> les voy a obligar que donen. El hecho de que donen o quieran hacerlo, ya es un enorme gesto de por sí y se lo agradece en cantidades infinitas.</span>
-        <p>
-        <ul>
-            <li><i class="fas fa-wallet"></i><B>&nbsp;Ronin:</B>&nbsp;ronin:dd6fbb017b4bfb7cb8cbe54d37c56675caf48daa</li>
-            <li><i class="fas fa-mug-hot"></i></i><B>&nbsp;<a href="https://cafecito.app/jmarcosg">Cafecito</a></B></li>
-        </ul>
+        <span>Tanto las donaciones de Ronin como las de Cafecito <B>NO SON OBLIGATORIAS</B> y <B>NUNCA</B> les voy a obligar que donen. El hecho de que donen o quieran hacerlo, ya es un enorme gesto de por sí y se lo agradece en cantidades infinitas.</span>
+
+        <p class="donos">
+            <i class="fas fa-wallet"></i><B>&nbsp;Ronin:</B>&nbsp;<span>ronin:dd6fbb017b4bfb7cb8cbe54d37c56675caf48daa</span>
+
+            <br><br>
+
+            <span><i class="fas fa-mug-hot"></i><B>&nbsp;<a href="https://cafecito.app/jmarcosg">Cafecito</a></B></span>
         </p>
     </div>
 

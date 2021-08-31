@@ -3,15 +3,44 @@
   margin: 0 auto;
   width: 1380px;
   font-family: "Roboto";
-  font-size: 18px;
+  font-size: 17px;
 
-  color: #462d17;
+  color: #432d17;
+}
+
+.tips {
+  margin-top: 15px;
+  margin: 0 auto;
+  width: 1380px;
+  font-family: "Roboto";
+  font-size: 17px;
+
+  color: #432d17;
 }
 
 .contact a:link,
 .contact a:visited,
 .contact a:hover,
-.contact a:active {
+.contact a:active,
+.tips a:link,
+.tips a:visited,
+.tips a:hover,
+.tips a:active {
   text-decoration: none;
-  color: #462d17;
+  color: #432d17;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .contact {
+    width: 400px;
+  }
+
+  .tips {
+    width: 400px;
+  }
+
+  .donos {
+    font-size: 14px;
+  }
 }
