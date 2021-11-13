@@ -1,0 +1,329 @@
+.tools {
+  height: fit-content;
+  padding-bottom: 200px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.energy-calculator-container {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+/* Rounds */
+.round-container {
+  margin-top: 5px;
+  margin: 0 auto;
+  width: auto;
+  display: block;
+}
+
+.round-info {
+  margin: 0 auto;
+  width: 170px;
+  background: #0000002d;
+  border-radius: 4px;
+}
+
+.round-info span {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+
+  color: #fff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5d330b;
+}
+
+/* Energy */
+.energy-quantity {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: -2px;
+}
+
+.energy-quantity img {
+  margin-top: 8px;
+  height: 90px;
+  width: 90px;
+  border: 5px solid #5d330b;
+  border-radius: 60px;
+}
+
+.energy-quantity span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5d330b;
+}
+
+.actual-energy {
+  font-size: 34px;
+}
+
+.max-energy {
+  font-size: 34px;
+}
+
+/* Gain-Loss */
+.energy-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.energy-tools button {
+  cursor: pointer;
+  height: 45px;
+  width: 180px;
+  border-radius: 4px 4px 4px 4px;
+  margin: 8px 8px 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #e78516;
+  border: 4px solid #5d330b;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.energy-tools button:hover {
+  background-color: #d9730a;
+  color: #fff;
+}
+
+.energy-tools button:active {
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+}
+
+.energy-tools i {
+  font-size: 14px;
+  align-items: center;
+}
+
+#nextRound {
+  background-color: #ffac00;
+}
+
+#nextRound:hover {
+  background-color: #c48406;
+  color: #fff;
+}
+
+#newArena {
+  background-color: #f13232;
+}
+
+#newArena:hover {
+  background-color: #f14747;
+  color: #fff;
+}
+
+/* Parts */
+.parts-container {
+  display: block;
+  margin-top: 2rem;
+  padding: 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 0px solid #5d330b;
+}
+
+.parts-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.parts-grid-item {
+  padding: 0.5rem;
+}
+
+.axie-type-select-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.axie-type {
+  width: 100%;
+  max-width: 75px;
+  border: 2px solid #5d330b;
+  background: transparent;
+  color: #443933;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 3px 0px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.mouth {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.horn {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.back {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.tail {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.part-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #008ec6;
+  padding: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid #5d330b;
+}
+
+.part-button img {
+  height: 38px;
+  width: 38px;
+}
+
+.part-label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+
+  color: #ffffff;
+}
+
+.part-label label {
+  background: #db4647;
+  border: 3px solid #8c3a21;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px #3e2c2c;
+}
+
+.axie-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.dead-axie {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid #5d330b;
+
+  background: #a517a0;
+  border-color: #2a1706;
+}
+
+.dead-axie button {
+  background: none;
+  font-size: 18px;
+  color: white;
+  border: none;
+}
+
+.reset-parts {
+  background: #ffac00;
+  border: 3px solid #8c3a21;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px #3e2c2c;
+}
+
+.reset-parts button {
+  background: none;
+  font-size: 18px;
+  color: white;
+  border: none;
+}
+
+.axie1 {
+  background-color: #58c02d;
+}
+
+.axie2 {
+  background-color: #ffb838;
+}
+
+.axie3 {
+  background-color: #ff8cbc;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .round-info {
+    font-size: 22px;
+  }
+
+  .round-number {
+    font-size: 22px;
+  }
+
+  .round-container img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .energy-quantity {
+    font-size: 22px;
+  }
+
+  .ene-gain-loss-container {
+    max-width: 350px;
+  }
+}

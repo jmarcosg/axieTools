@@ -1,3 +1,29 @@
+/* NEW
+.parts {
+  padding: 0.5rem;
+}
+.parts-container {
+  margin: auto;
+  margin-top: 15px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.axie-type {
+  width: 100%;
+  max-width: 75px;
+  border: 2px solid #5d330b;
+  background: transparent;
+  color: #443933;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 3px 0px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+} */
+
+/* OLD */
 .cards-and-parts-container table {
   margin: auto;
   border-collapse: collapse;
