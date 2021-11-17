@@ -94,7 +94,11 @@ body {
 }
 
 .main-container {
-  text-align: center;
+  height: fit-content;
+  padding-bottom: 200px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15px;
   padding: 0.5rem;
 }

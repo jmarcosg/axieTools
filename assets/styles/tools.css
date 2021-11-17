@@ -1,4 +1,4 @@
-.tools {
+.tools-container {
   height: fit-content;
   padding-bottom: 200px;
   max-width: 540px;
@@ -22,6 +22,7 @@
 .round-info {
   margin: 0 auto;
   width: 170px;
+  text-align: center;
   background: #0000002d;
   border-radius: 4px;
 }
@@ -92,6 +93,7 @@
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  text-shadow: 1px 1px 2px #5d330b;
 
   background-color: #e78516;
   border: 4px solid #5d330b;
@@ -115,16 +117,17 @@
 }
 
 #nextRound {
-  background-color: #ffac00;
+  background-color: #fdb100;
+  text-shadow: 1px 1px 2px #5d330b;
 }
 
 #nextRound:hover {
   background-color: #c48406;
-  color: #fff;
 }
 
 #newArena {
   background-color: #f13232;
+  text-shadow: 1px 1px 2px #5d330b;
 }
 
 #newArena:hover {
@@ -139,7 +142,7 @@
   padding: 0px;
   border-radius: 5px;
   box-sizing: border-box;
-  border: 0px solid #5d330b;
+  border: 4px solid #5d330b;
 }
 
 .parts-container-grid {
@@ -159,6 +162,7 @@
 }
 
 .axie-type {
+  cursor: pointer;
   width: 100%;
   max-width: 75px;
   border: 2px solid #5d330b;
@@ -169,6 +173,21 @@
   padding: 3px 0px;
   margin-bottom: 0.5rem;
   font-weight: bold;
+}
+
+.axie1 {
+  background-color: #58c02d;
+  transition: 0.5;
+}
+
+.axie2 {
+  background-color: #ffb838;
+  transition: 0.5;
+}
+
+.axie3 {
+  background-color: #ff8cbc;
+  transition: 0.5;
 }
 
 .mouth {
@@ -199,7 +218,8 @@
   margin-bottom: 0.2rem;
 }
 
-.part-button {
+.part-button button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   display: flex;
@@ -210,6 +230,11 @@
   border-radius: 5px;
   box-sizing: border-box;
   border: 2px solid #5d330b;
+}
+
+.part-button button:active {
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(1px);
 }
 
 .part-button img {
@@ -227,6 +252,7 @@
 }
 
 .part-label label {
+  cursor: pointer;
   background: #db4647;
   border: 3px solid #8c3a21;
   display: flex;
@@ -248,31 +274,25 @@
   margin-bottom: 0.2rem;
 }
 
-.dead-axie {
+.disabled button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #a19b9b;
   padding: 2px;
   border-radius: 5px;
   box-sizing: border-box;
-  border: 2px solid #5d330b;
-
-  background: #a517a0;
-  border-color: #2a1706;
+  border: 2px solid #726868;
 }
 
-.dead-axie button {
-  background: none;
-  font-size: 18px;
-  color: white;
-  border: none;
-}
-
-.reset-parts {
-  background: #ffac00;
-  border: 3px solid #8c3a21;
+.disabled label {
+  cursor: pointer;
+  background: #8d8383ad;
+  border: 3px solid #756968;
+  color: #727070;
   display: flex;
   width: 100%;
   align-items: center;
@@ -285,33 +305,71 @@
   box-shadow: 0px 0px 1px #3e2c2c;
 }
 
-.reset-parts button {
-  background: none;
-  font-size: 18px;
-  color: white;
-  border: none;
+.dead-axie {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid #5d330b;
+
+  color: #fff;
+  background: #a517a0;
+  border: 2px solid #5d330b;
 }
 
-.axie1 {
-  background-color: #58c02d;
+.dead-axie:active {
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(1px);
 }
 
-.axie2 {
-  background-color: #ffb838;
+.reset-parts {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid #5d330b;
+
+  color: #fff;
+  background: #ffac00;
+  border: 2px solid #5d330b;
 }
 
-.axie3 {
-  background-color: #ff8cbc;
+.reset-parts:active {
+  box-shadow: 0 2px rgba(0, 0, 0, 0.15);
+  transform: translateY(1px);
 }
 
 /* responsive */
 @media screen and (max-width: 600px) {
   .round-info {
-    font-size: 22px;
+    width: 120px;
   }
 
-  .round-number {
-    font-size: 22px;
+  .round-info span {
+    font-size: 28px;
+  }
+
+  .energy-quantity {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: -2px;
+  }
+
+  .energy-quantity img {
+    height: 90px;
+    width: 90px;
   }
 
   .round-container img {
@@ -319,11 +377,12 @@
     width: 45px;
   }
 
-  .energy-quantity {
-    font-size: 22px;
-  }
-
-  .ene-gain-loss-container {
-    max-width: 350px;
+  .parts-container {
+    display: block;
+    margin-top: 2rem;
+    padding: 0px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 4px solid #5d330b;
   }
 }

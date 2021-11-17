@@ -77,178 +77,178 @@
 
             <div class="parts-container">
                 <div class="parts-container-grid">
-                    <div class="parts-grid-item axie1">
+                    <div id="axie1Grid" class="parts-grid-item axie1">
                         <div class="axie-type-select-container">
-                            <select class="axie-type">
+                            <select id="axie1Select" class="axie-type" onchange="changeAxieGridColor()">
                                 <option value="plant" selected>Plant</option>
-                                <option value="plant">Aqua</option>
-                                <option value="plant">Beast</option>
-                                <option value="plant">Bird</option>
-                                <option value="plant">Bug</option>
-                                <option value="plant">Dawn</option>
-                                <option value="plant">Dusk</option>
-                                <option value="plant">Mech</option>
-                                <option value="plant">Reptile</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast">Beast</option>
+                                <option value="bird">Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
                             </select>
                         </div>
                         <div class="mouth">
-                            <div class="part-button">
-                                <img src="assets/img/parts/plant/mouth.svg">
+                            <div id="a1mButton" class="part-button" role="button" aria-pressed="false">
+                                <button class="" onclick="usePartA1M()"><img id="a1m" src="assets/img/parts/plant/mouth.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a1mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1mCounter" class="" onclick="substractPartA1M()">0</label>
                             </div>
                         </div>
                         <div class="horn">
-                            <div class="part-button">
-                                <img src="assets/img/parts/plant/horn.svg">
+                            <div id="a1hButton" class="part-button">
+                                <button class="" onclick="usePartA1H()"><img id="a1h" src="assets/img/parts/plant/horn.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a1hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1hCounter" onclick="substractPartA1H()">0</label>
                             </div>
                         </div>
                         <div class="back">
-                            <div class="part-button">
-                                <img src="assets/img/parts/plant/back.svg">
+                            <div id="a1bButton" class="part-button">
+                                <button class="" onclick="usePartA1B()"><img id="a1b" src="assets/img/parts/plant/back.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a1bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1bCounter" onclick="substractPartA1B()">0</label>
                             </div>
                         </div>
                         <div class="tail">
-                            <div class="part-button">
-                                <img src="assets/img/parts/plant/tail.svg">
+                            <div id="a1tButton" class="part-button">
+                                <button class="" onclick="usePartA1T()"><img id="a1t" src="assets/img/parts/plant/tail.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a1tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1tCounter" onclick="substractPartA1T()">0</label>
                             </div>
                         </div>
                         <div class="axie-actions">
-                            <div class="dead-axie">
-                                <button><i class="fas fa-skull"></i></button>
+                            <div id="a1DeadButton">
+                                <button class="dead-axie" onclick="killAxie1()"><i class="fas fa-skull"></i></button>
                             </div>
-                            <div class="reset-parts">
-                                <button><i class="fas fa-sync"></i></button>
+                            <div>
+                                <button class="reset-parts" onclick="resetA1Parts()"><i class="fas fa-sync"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="parts-grid-item axie2">
+                    <div id="axie2Grid" class="parts-grid-item axie2">
                         <div class="axie-type-select-container">
-                            <select class="axie-type">
-                                <option value="plant" selected>Plant</option>
-                                <option value="plant">Aqua</option>
-                                <option value="plant">Beast</option>
-                                <option value="plant">Bird</option>
-                                <option value="plant">Bug</option>
-                                <option value="plant">Dawn</option>
-                                <option value="plant">Dusk</option>
-                                <option value="plant">Mech</option>
-                                <option value="plant">Reptile</option>
+                            <select id="axie2Select" class="axie-type" onchange="changeAxieGridColor()">
+                                <option value="plant">Plant</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast" selected>Beast</option>
+                                <option value="bird">Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
                             </select>
                         </div>
                         <div class="mouth">
-                            <div class="part-button">
-                                <img src="assets/img/parts/beast/mouth.svg">
+                            <div id="a2mButton" class="part-button">
+                                <button class="" onclick="usePartA2M()"><img id="a2m" src="assets/img/parts/beast/mouth.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a2mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2mCounter" onclick="substractPartA2M()">0</label>
                             </div>
                         </div>
                         <div class="horn">
-                            <div class="part-button">
-                                <img src="assets/img/parts/beast/horn.svg">
+                            <div id="a2hButton" class="part-button">
+                                <button class="" onclick="usePartA2H()"><img id="a2h" src="assets/img/parts/beast/horn.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a2hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2hCounter" onclick="substractPartA2H()">0</label>
                             </div>
                         </div>
                         <div class="back">
-                            <div class="part-button">
-                                <img src="assets/img/parts/beast/back.svg">
+                            <div id="a2bButton" class="part-button">
+                                <button class="" onclick="usePartA2B()"><img id="a2b" src="assets/img/parts/beast/back.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a2bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2bCounter" onclick="substractPartA2B()">0</label>
                             </div>
                         </div>
                         <div class="tail">
-                            <div class="part-button">
-                                <img src="assets/img/parts/beast/tail.svg">
+                            <div id="a2tButton" class="part-button">
+                                <button class="" onclick="usePartA2T()"><img id="a2t" src="assets/img/parts/beast/tail.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a2tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2tCounter" onclick="substractPartA2T()">0</label>
                             </div>
                         </div>
                         <div class="axie-actions">
-                            <div class="dead-axie">
-                                <button><i class="fas fa-skull"></i></button>
+                            <div id="a2DeadButton">
+                                <button class="dead-axie" onclick="killAxie2()"><i class="fas fa-skull"></i></button>
                             </div>
-                            <div class="reset-parts">
-                                <button><i class="fas fa-sync"></i></button>
+                            <div>
+                                <button class="reset-parts" onclick="resetA2Parts()"><i class="fas fa-sync"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="parts-grid-item axie3">
+                    <div id="axie3Grid" class="parts-grid-item axie3">
                         <div class="axie-type-select-container">
-                            <select class="axie-type">
-                                <option value="plant" selected>Plant</option>
-                                <option value="plant">Aqua</option>
-                                <option value="plant">Beast</option>
-                                <option value="plant">Bird</option>
-                                <option value="plant">Bug</option>
-                                <option value="plant">Dawn</option>
-                                <option value="plant">Dusk</option>
-                                <option value="plant">Mech</option>
-                                <option value="plant">Reptile</option>
+                            <select id="axie3Select" class="axie-type" onchange="changeAxieGridColor()">
+                                <option value="plant">Plant</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast">Beast</option>
+                                <option value="bird" selected>Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
                             </select>
                         </div>
                         <div class="mouth">
-                            <div class="part-button">
-                                <img src="assets/img/parts/bird/mouth.svg">
+                            <div id="a3mButton" class="part-button">
+                                <button onclick="usePartA3M()"><img id="a3m" src="assets/img/parts/bird/mouth.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a3mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3mCounter" onclick="substractPartA3M()">0</label>
                             </div>
                         </div>
                         <div class="horn">
-                            <div class="part-button">
-                                <img src="assets/img/parts/bird/horn.svg">
+                            <div id="a3hButton" class="part-button">
+                                <button onclick="usePartA3H()"><img id="a3h" src="assets/img/parts/bird/horn.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a3hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3hCounter" onclick="substractPartA3H()">0</label>
                             </div>
                         </div>
                         <div class="back">
-                            <div class="part-button">
-                                <img src="assets/img/parts/bird/back.svg">
+                            <div id="a3bButton" class="part-button">
+                                <button onclick="usePartA3B()"><img id="a3b" src="assets/img/parts/bird/back.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a3bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3bCounter" onclick="substractPartA3B()">0</label>
                             </div>
                         </div>
                         <div class="tail">
-                            <div class="part-button">
-                                <img src="assets/img/parts/bird/tail.svg">
+                            <div id="a3tButton" class="part-button">
+                                <button onclick="usePartA3T()"><img id="a3t" src="assets/img/parts/bird/tail.svg"></button>
                             </div>
-                            <div class="part-label">
-                                <label class="">0</label>
+                            <div id="a3tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3tCounter" onclick="substractPartA3T()">0</label>
                             </div>
                         </div>
                         <div class="axie-actions">
-                            <div class="dead-axie">
-                                <button><i class="fas fa-skull"></i></button>
+                            <div id="a3DeadButton">
+                                <button class="dead-axie" onclick="killAxie3()"><i class="fas fa-skull"></i></button>
                             </div>
-                            <div class="reset-parts">
-                                <button><i class="fas fa-sync"></i></button>
+                            <div>
+                                <button onclick="resetA3Parts()" class="reset-parts"><i class="fas fa-sync"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-
 
     <footer>
         <p>
