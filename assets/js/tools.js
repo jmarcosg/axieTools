@@ -43,11 +43,11 @@ function nextRound(){
   document.getElementById("actualEnergy").innerHTML = counter;
 }
 
-// Axie parts functions
-
 /**
- * Changes axie grid background color
+ * Axie parts functions
  */
+
+// Changes axie grid background color
 function changeAxieGridColor() {
   axie1ColorAndParts();
   axie2ColorAndParts();
@@ -380,7 +380,7 @@ function substractPartA1T() {
     axie1mouth = 0;
   }
   
-  document.getElementById("a1tCounterCounter").innerHTML = axie1mouth;
+  document.getElementById("a1tCounter").innerHTML = axie1mouth;
 }
 
 function resetA1Parts() {
@@ -642,15 +642,15 @@ function killAxie2 () {
   document.getElementById("a2tLabel").classList.add("disabled");
   document.getElementById("a2DeadButton").classList.add("disabled");
   
-  var axie1mouth = "-";
-  var axie1horn = "-";
-  var axie1back = "-";
-  var axie1tail = "-";
+  var axie2mouth = "-";
+  var axie2horn = "-";
+  var axie2back = "-";
+  var axie2tail = "-";
 
-  document.getElementById("a2mCounter").innerHTML = axie1mouth;
-  document.getElementById("a2hCounter").innerHTML = axie1horn;
-  document.getElementById("a2bCounter").innerHTML = axie1back;
-  document.getElementById("a2tCounter").innerHTML = axie1tail;
+  document.getElementById("a2mCounter").innerHTML = axie2mouth;
+  document.getElementById("a2hCounter").innerHTML = axie2horn;
+  document.getElementById("a2bCounter").innerHTML = axie2back;
+  document.getElementById("a2tCounter").innerHTML = axie2tail;
 }
 
 function killAxie3 () {
@@ -664,13 +664,13 @@ function killAxie3 () {
   document.getElementById("a3tLabel").classList.add("disabled");
   document.getElementById("a3DeadButton").classList.add("disabled");
   
-  var axie1mouth = "-";
-  var axie1horn = "-";
-  var axie1back = "-";
-  var axie1tail = "-";
+  var axie3mouth = "-";
+  var axie3horn = "-";
+  var axie3back = "-";
+  var axie3tail = "-";
 
-  document.getElementById("a3mCounter").innerHTML = axie1mouth;
-  document.getElementById("a3hCounter").innerHTML = axie1horn;
-  document.getElementById("a3bCounter").innerHTML = axie1back;
-  document.getElementById("a3tCounter").innerHTML = axie1tail;
+  document.getElementById("a3mCounter").innerHTML = axie3mouth;
+  document.getElementById("a3hCounter").innerHTML = axie3horn;
+  document.getElementById("a3bCounter").innerHTML = axie3back;
+  document.getElementById("a3tCounter").innerHTML = axie3tail;
 }

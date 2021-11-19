@@ -61,17 +61,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 36px;
+
   color: white;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #5d330b;
-}
-
-.actual-energy {
-  font-size: 34px;
-}
-
-.max-energy {
-  font-size: 34px;
 }
 
 /* Gain-Loss */
@@ -361,20 +355,17 @@
 
   .energy-quantity {
     position: relative;
-    font-family: "Roboto", sans-serif;
     text-align: center;
+    letter-spacing: -3px;
+  }
+
+  .energy-quantity span {
     font-size: 32px;
-    letter-spacing: -2px;
   }
 
   .energy-quantity img {
-    height: 90px;
-    width: 90px;
-  }
-
-  .round-container img {
-    height: 45px;
-    width: 45px;
+    height: 65px;
+    width: 65px;
   }
 
   .parts-container {

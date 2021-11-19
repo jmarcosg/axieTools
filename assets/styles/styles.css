@@ -105,11 +105,11 @@ body {
 
 /* footer */
 footer {
-  /* padding-top: 15px; */
+  padding-top: 15px;
   position: relative;
   bottom: 0;
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
   text-align: center;
 
   color: #462d17;
