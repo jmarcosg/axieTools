@@ -1,6 +1,4 @@
 .tools-container {
-  height: fit-content;
-  padding-bottom: 200px;
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
@@ -127,6 +125,186 @@
 #newArena:hover {
   background-color: #f14747;
   color: #fff;
+}
+
+.cnc-container {
+  display: flex;
+  margin-top: 15px;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  position: relative;
+  margin-top: 15px;
+  text-align: start;
+  padding-left: 80px;
+}
+.cards-container img {
+  width: 85px;
+  height: 100px;
+  margin-top: 10%;
+  opacity: 85%;
+}
+
+.cards-container span {
+  position: absolute;
+  font-size: 36px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 20%;
+  margin-top: 22%;
+  background: #0000002d;
+  width: 35px;
+  border-radius: 4px;
+
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5d330b;
+}
+
+.cards-buttons {
+  display: grid;
+}
+
+.cards-buttons button {
+  cursor: pointer;
+  height: 45px;
+  width: 75px;
+  border-radius: 4px 4px 4px 4px;
+  margin-left: 15px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px #5d330b;
+
+  border: 3px solid #5d330b;
+}
+
+.minus-card {
+  background-color: #f13232;
+  text-shadow: 1px 1px 2px #5d330b;
+  color: #ffffff;
+}
+
+.minus-card:hover {
+  background-color: #f14747;
+  color: #fff;
+}
+
+.plus-card {
+  background-color: #58c02d;
+  color: #ffffff;
+}
+
+.plus-card:hover {
+  background-color: #63c23a;
+  color: #ffffff;
+}
+
+/* Calculator */
+#modalBtn {
+  margin-top: 55%;
+  margin-left: 120%;
+  background: none;
+  width: 65px;
+  height: 75px;
+  background: #5d330b;
+  border-radius: 4px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #131313;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #131313;
+  border-radius: 4px;
+  width: 340px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #ff8800;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fd9013;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#Display-area {
+  width: 100%;
+  margin: 3vh 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, minmax(40px, auto));
+  word-wrap: break-word;
+  padding-bottom: 20px;
+  border-bottom: 1px rgba(128, 128, 128, 0.116) solid;
+}
+
+#Display-area .currentInput {
+  /* display: flex; */
+  text-align: right;
+  height: 8vh;
+  color: white;
+  font-size: xx-large;
+  line-height: 2;
+  word-wrap: break-word;
+}
+
+#Display-area .answerScreen {
+  text-align: right;
+  color: rgba(150, 150, 150, 0.87);
+  height: 7px;
+  line-height: 3;
+  font-size: larger;
+}
+
+.keypad-btns {
+  display: grid;
+  grid: repeat(5, 70px) / repeat(4, 70px);
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+.keypad-btns button {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #131313;
+  color: white;
+  font-size: x-large;
+}
+
+.keypad-btns .fun_btn {
+  color: #ff8800;
+}
+
+.num_btn:hover,
+.fun_btn:hover {
+  background-color: rgba(29, 29, 29, 0.979);
 }
 
 /* Parts */

@@ -674,3 +674,214 @@ function killAxie3 () {
   document.getElementById("a3bCounter").innerHTML = axie3back;
   document.getElementById("a3tCounter").innerHTML = axie3tail;
 }
+
+// Calculator modal and functions
+// Get the modal, btn and span
+var modal = document.getElementById("calculatorModal");
+var btn = document.getElementById("modalBtn");
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Variables
+let currentInput = document.querySelector('.currentInput');
+let answerScreen = document.querySelector('.answerScreen');
+let buttons = document.querySelectorAll('button');
+let erasebtn = document.querySelector('#erase');
+let clearbtn = document.querySelector('#clear');
+let evaluate = document.querySelector('#evaluate');
+
+// Calculator Display
+let realTimeScreenValue = [];
+
+// To Clear
+clearbtn.addEventListener("click", () => {
+    realTimeScreenValue = [''];
+    answerScreen.innerHTML = 0;
+    currentInput.className = 'currentInput';
+    answerScreen.className = 'answerScreen';
+    answerScreen.style.color = " rgba(150, 150, 150, 0.87)";
+});
+
+// Get value of any button clicked and display to the screen
+buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        // when clicked button is not erased button 
+        if (!btn.id.match('erase')) {
+            // To display value on btn press
+            realTimeScreenValue.push(btn.value);
+            currentInput.innerHTML = realTimeScreenValue.join('');
+
+            // To evaluate answer in real time
+            if (btn.classList.contains('num_btn')) {
+                answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
+            }
+        }
+
+        // When erase button is clicked
+        if (btn.id.match('erase')) {
+            realTimeScreenValue.pop();
+            currentInput.innerHTML = realTimeScreenValue.join('');
+            answerScreen.innerHTML = eval(realTimeScreenValue.join(''));
+        }
+
+        // When clicked button is evaluate button
+        if (btn.id.match('evaluate')) {
+            currentInput.className = 'answerScreen';
+            answerScreen.className = 'currentInput';
+            answerScreen.style.color = "white";
+        }
+
+        // To prevent undefined error in screen
+        if (typeof eval(realTimeScreenValue.join('')) == 'undefined') {
+            answerScreen.innerHTML = 0;
+        }
+    });
+});
+
+/** CARD TRACKER */
+function showCardOptions(){ 
+  $(".card-tracker-wrapper").slideDown("fast");
+}
+
+function hideCardOptions(){ 
+  $(".card-tracker-wrapper").slideUp("fast");
+}
+
+
+function addCard(){
+  card = card + 1;
+  $("#card-txt").text(card);
+}
+
+function minusCard(){
+  card = card - 1;
+  if(card <= 0)
+      card = 0;
+  $("#card-txt").text(card);
+}
+
+
+function addUsedCard(){
+  cardUsed = cardUsed + 1;
+  $('#card-used-label').text(cardUsed);
+}
+
+function minusUsedCard(){
+  cardUsed = cardUsed - 1;
+  if(cardUsed <= 0)
+      cardUsed = 0;
+  $('#card-used-label').text(cardUsed);
+}
+
+function addDrawCard(){
+  cardDraw = cardDraw + 1;
+  $('#card-draw-label').text(cardDraw);
+}
+
+function minusDrawCard(){
+  cardDraw = cardDraw - 1;
+  if(cardDraw <= 0)
+      cardDraw = 0;
+  $('#card-draw-label').text(cardDraw);
+}
+
+function addDiscardCard(){
+  cardDiscard = cardDiscard + 1;
+  $('#card-discard-label').text(cardDiscard);
+}
+
+function minusDiscardCard(){
+  cardDiscard = cardDiscard - 1;
+  if(cardDiscard <= 0)
+      cardDiscard = 0;
+  $('#card-discard-label').text(cardDiscard);
+}
+
+function initializeCard(){
+  cardDraw = 0;
+  cardUsed = 0;
+  cardDiscard = 0;
+
+  $("#card-used-label").text(card);
+  $("#card-draw-label").text(card);
+  $("#card-discard-label").text(card);
+}
+
+function calculateCard(){
+  /** CARD FUNCTIONS */
+  currentCard = ( currentCard - cardUsed + cardDraw - cardDiscard ) + 3;
+  if(currentCard >= 12)
+      currentCard = 12;
+
+  if(currentCard <= 3)
+      currentCard = 3;
+
+  $("#current-card").text(currentCard);
+  initializeCard();
+
+}
+
+
+//Used Card
+
+$("#card-used-label").click(function(){
+  minusUsedCard();
+});
+$("#card-used-icon").click(function(){
+  
+  addUsedCard();
+});
+
+
+//Draw Card
+$("#card-draw-label").click(function(){
+  minusDrawCard();
+});
+$("#card-draw-icon").click(function(){
+  addDrawCard();
+});
+
+
+//Discard Card
+$("#card-discard-label").click(function(){
+  minusDiscardCard();
+});
+$("#card-discard-icon").click(function(){
+  
+  addDiscardCard();
+});
+
+
+$("#current-card").click(function() { 
+  return (this.tog = !this.tog) ? showCardOptions() : hideCardOptions();
+});
+
+$("#card-tracker-close").click(function() { 
+  hideCardOptions();
+});
+
+$('#card-plus-icon').click(function(){
+  addCard();
+});
+
+$('#card-minus-icon').click(function(){
+  minusCard();
+});
+
+
