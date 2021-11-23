@@ -592,7 +592,8 @@
   }
   .energy-tools button {
     width: 140px;
-    margin: 2px 2px 0;
+    height: 40px;
+    margin: 1px 1px 0;
     font-size: 14px;
   }
 
