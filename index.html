@@ -17,14 +17,9 @@
 
     <!--stylesheet-->
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <link rel="stylesheet" href="assets/styles/calculator.css">
-    <link rel="stylesheet" href="assets/styles/table.css">
+    <link rel="stylesheet" href="assets/styles/tools.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body onload="uncheckAll()">
@@ -47,130 +42,273 @@
     </div>
 
     <div class="main-container">
-        <div class="calculator-container">
-            <div class="round-container">
-                <span class="round-info">Ronda&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
-                <img src="assets/img/energy.png">
+        <div class="tools-container">
+            <div class="energy-calculator-container">
+                <div class="round-container">
+                    <div class="round-info">
+                        <span>Ronda&nbsp;</span>
+                        <span id="roundNumber" class="">1</span>
+                    </div>
 
-                <div class="energy-quantity">
-                    <span id="energyQuantity">3</span><span>/10</span>
+                    <div class="energy-quantity">
+                        <img class="axie-match-energy" src="assets/img/matchEnergyIcon.svg" alt="Ícono con la cantidad de energía del oponente">
+
+                        <span>
+                            <b id="actualEnergy" class="actual-energy">3</b>
+                            <b class="energy-divider">/</b>
+                            <b id="maxEnergy" class="max-energy">10</b>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="ene-gain-loss-container">
+                    <div class="energy-tools">
+                        <button onclick="subtract()"><i class="fas fa-minus"></i>&nbsp;1 Energía</button>
+                        <button onclick="add()"><i class="fas fa-plus"></i>&nbsp;1 Energía</button>
+                    </div>
+
+                    <div class="energy-tools">
+                        <button id="nextRound" onclick="nextRound()">Siguiente Ronda</button>
+                        <button id="newArena" onclick="reset()">Nueva Partida</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="ene-gain-loss-container">
-                <div class="eneCalc-item">
-                    <button onclick="subtract()">-1 ENE</button>
+            <div class="cnc-container">
+                <div class="cards-container">
+                    <img class="enemy-cards" src="assets/img/cards.png" alt="Enemy cards"><span id="currentCards" class="current-cards">6</span>
+
+                    <div class="cards-buttons">
+                        <button class="minus-card">Usó / Perdió</button>
+                        <button class="plus-card">Robó / Ganó</button>
+                        <button class="minus-card">Descartó</button>
+                    </div>
                 </div>
 
-                <div class="eneCalc-item">
-                    <button onclick="add()">+1 ENE</button>
+                <div>
+                    <img id="modalBtn" src="assets/img/calculatorIcon.svg" alt="Drawn calculator">
                 </div>
 
-                <div class="eneCalc-item">
-                    <button onclick="nextRound()">SIGUIENTE RONDA</button>
-                </div>
 
-                <div class="eneCalc-item">
-                    <button onclick="reset()">NUEVA PARTIDA</button>
+                <div id="calculatorModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <section id="Display-area">
+                            <div class="currentInput"></div>
+                            <div class="answerScreen">0</div>
+                        </section>
+                        <section class="keypad-btns">
+                            <button type="button" class="fun_btn" id="clear" value="">
+                                C
+                            </button>
+                            <button type="button" class="fun_btn" id="erase" value="">
+                                &#11013;
+                            </button>
+                            <button type="button" class="fun_btn" value="/">/</button>
+                            <button type="button" class="fun_btn" value="%">%</button>
+                            <button type="button" class="num_btn" value="7">7</button>
+                            <button type="button" class="num_btn" value="8">8</button>
+                            <button type="button" class="num_btn" value="9">9</button>
+                            <button type="button" class="fun_btn" value="*">x</button>
+                            <button type="button" class="num_btn" value="4">4</button>
+                            <button type="button" class="num_btn" value="5">5</button>
+                            <button type="button" class="num_btn" value="6">6</button>
+                            <button type="button" class="fun_btn" value="-">-</button>
+                            <button type="button" class="num_btn" value="1">1</button>
+                            <button type="button" class="num_btn" value="2">2</button>
+                            <button type="button" class="num_btn" value="3">3</button>
+                            <button type="button" class="fun_btn" value="+">+</button>
+                            <button type="button" class="num_btn" value="00">00</button>
+                            <button type="button" class="num_btn" value="0">0</button>
+                            <button type="button" class="num_btn" value=".">.</button>
+                            <button type="button" class="fun_btn" id="evaluate" value="">=</button>
+                        </section>
+                    </div>
                 </div>
             </div>
-            <script src="assets/js/energyCalculator.js"></script>
+
+
+
+            <div class="parts-container">
+                <div class="parts-container-grid">
+                    <div id="axie1Grid" class="parts-grid-item axie1">
+                        <div class="axie-type-select-container">
+                            <select id="axie1Select" class="axie-type" onchange="changeAxieGridColor()">
+                                <option value="plant" selected>Plant</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast">Beast</option>
+                                <option value="bird">Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
+                            </select>
+                        </div>
+                        <div class="mouth">
+                            <div id="a1mButton" class="part-button" role="button" aria-pressed="false">
+                                <button class="" onclick="usePartA1M()"><img id="a1m" src="assets/img/parts/plant/mouth.svg"></button>
+                            </div>
+                            <div id="a1mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1mCounter" class="" onclick="substractPartA1M()">0</label>
+                            </div>
+                        </div>
+                        <div class="horn">
+                            <div id="a1hButton" class="part-button">
+                                <button class="" onclick="usePartA1H()"><img id="a1h" src="assets/img/parts/plant/horn.svg"></button>
+                            </div>
+                            <div id="a1hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1hCounter" onclick="substractPartA1H()">0</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div id="a1bButton" class="part-button">
+                                <button class="" onclick="usePartA1B()"><img id="a1b" src="assets/img/parts/plant/back.svg"></button>
+                            </div>
+                            <div id="a1bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1bCounter" onclick="substractPartA1B()">0</label>
+                            </div>
+                        </div>
+                        <div class="tail">
+                            <div id="a1tButton" class="part-button">
+                                <button class="" onclick="usePartA1T()"><img id="a1t" src="assets/img/parts/plant/tail.svg"></button>
+                            </div>
+                            <div id="a1tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a1tCounter" onclick="substractPartA1T()">0</label>
+                            </div>
+                        </div>
+                        <div class="axie-actions">
+                            <div id="a1DeadButton">
+                                <button class="dead-axie" onclick="killAxie1()"><i class="fas fa-skull"></i></button>
+                            </div>
+                            <div>
+                                <button class="reset-parts" onclick="resetA1Parts()"><i class="fas fa-sync"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="axie2Grid" class="parts-grid-item axie2">
+                        <div class="axie-type-select-container">
+                            <select id="axie2Select" class="axie-type" onchange="changeAxieGridColor()">
+                                <option value="plant">Plant</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast" selected>Beast</option>
+                                <option value="bird">Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
+                            </select>
+                        </div>
+                        <div class="mouth">
+                            <div id="a2mButton" class="part-button">
+                                <button class="" onclick="usePartA2M()"><img id="a2m" src="assets/img/parts/beast/mouth.svg"></button>
+                            </div>
+                            <div id="a2mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2mCounter" onclick="substractPartA2M()">0</label>
+                            </div>
+                        </div>
+                        <div class="horn">
+                            <div id="a2hButton" class="part-button">
+                                <button class="" onclick="usePartA2H()"><img id="a2h" src="assets/img/parts/beast/horn.svg"></button>
+                            </div>
+                            <div id="a2hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2hCounter" onclick="substractPartA2H()">0</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div id="a2bButton" class="part-button">
+                                <button class="" onclick="usePartA2B()"><img id="a2b" src="assets/img/parts/beast/back.svg"></button>
+                            </div>
+                            <div id="a2bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2bCounter" onclick="substractPartA2B()">0</label>
+                            </div>
+                        </div>
+                        <div class="tail">
+                            <div id="a2tButton" class="part-button">
+                                <button class="" onclick="usePartA2T()"><img id="a2t" src="assets/img/parts/beast/tail.svg"></button>
+                            </div>
+                            <div id="a2tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a2tCounter" onclick="substractPartA2T()">0</label>
+                            </div>
+                        </div>
+                        <div class="axie-actions">
+                            <div id="a2DeadButton">
+                                <button class="dead-axie" onclick="killAxie2()"><i class="fas fa-skull"></i></button>
+                            </div>
+                            <div>
+                                <button class="reset-parts" onclick="resetA2Parts()"><i class="fas fa-sync"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="axie3Grid" class="parts-grid-item axie3">
+                        <div class="axie-type-select-container">
+                            <select id="axie3Select" class="axie-type" onchange="changeAxieGridColor()">
+                                <option value="plant">Plant</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="beast">Beast</option>
+                                <option value="bird" selected>Bird</option>
+                                <option value="bug">Bug</option>
+                                <option value="dawn">Dawn</option>
+                                <option value="dusk">Dusk</option>
+                                <option value="mech">Mech</option>
+                                <option value="reptile">Reptile</option>
+                            </select>
+                        </div>
+                        <div class="mouth">
+                            <div id="a3mButton" class="part-button">
+                                <button onclick="usePartA3M()"><img id="a3m" src="assets/img/parts/bird/mouth.svg"></button>
+                            </div>
+                            <div id="a3mLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3mCounter" onclick="substractPartA3M()">0</label>
+                            </div>
+                        </div>
+                        <div class="horn">
+                            <div id="a3hButton" class="part-button">
+                                <button onclick="usePartA3H()"><img id="a3h" src="assets/img/parts/bird/horn.svg"></button>
+                            </div>
+                            <div id="a3hLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3hCounter" onclick="substractPartA3H()">0</label>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div id="a3bButton" class="part-button">
+                                <button onclick="usePartA3B()"><img id="a3b" src="assets/img/parts/bird/back.svg"></button>
+                            </div>
+                            <div id="a3bLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3bCounter" onclick="substractPartA3B()">0</label>
+                            </div>
+                        </div>
+                        <div class="tail">
+                            <div id="a3tButton" class="part-button">
+                                <button onclick="usePartA3T()"><img id="a3t" src="assets/img/parts/bird/tail.svg"></button>
+                            </div>
+                            <div id="a3tLabel" class="part-label" role="button" aria-pressed="false">
+                                <label id="a3tCounter" onclick="substractPartA3T()">0</label>
+                            </div>
+                        </div>
+                        <div class="axie-actions">
+                            <div id="a3DeadButton">
+                                <button class="dead-axie" onclick="killAxie3()"><i class="fas fa-skull"></i></button>
+                            </div>
+                            <div>
+                                <button onclick="resetA3Parts()" class="reset-parts"><i class="fas fa-sync"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <script src="assets/js/tools.js"></script>
 
-        <div class="cards-and-parts-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="table-header">Parte</th>
-                        <th class="table-header">Primer Aparición</th>
-                        <th class="table-header">Segunda Aparición</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <div>
-                        <tr>
-                            <td class="axie1">Boca</td>
-                            <td class="axie1" onclick="toggleA1M1()"><i class=" fas fa-times" id="a1m1"></i></td>
-                            <td class="axie1" onclick="toggleA1M2()"><i class="fas fa-times" id="a1m2"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="axie1">Cuerno</td>
-                            <td class="axie1" onclick="toggleA1H1()"><i class=" fas fa-times" id="a1h1"></td>
-                            <td class="axie1" onclick="toggleA1H2()"><i class=" fas fa-times" id="a1h2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie1">Espalda</td>
-                            <td class="axie1" onclick="toggleA1B1()"><i class=" fas fa-times" id="a1b1"></td>
-                            <td class="axie1" onclick="toggleA1B2()"><i class=" fas fa-times" id="a1b2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie1">Cola</td>
-                            <td class="axie1" onclick="toggleA1T1()"><i class=" fas fa-times" id="a1t1"></td>
-                            <td class="axie1" onclick="toggleA1T2()"><i class=" fas fa-times" id="a1t2"></td>
-                        </tr>
-                    </div>
-
-                    <div>
-                        <tr>
-                            <td class="axie2">Boca</td>
-                            <td class="axie2" onclick="toggleA2M1()"><i class=" fas fa-times" id="a2m1"></i></td>
-                            <td class="axie2" onclick="toggleA2M2()"><i class="fas fa-times" id="a2m2"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="axie2">Cuerno</td>
-                            <td class="axie2" onclick="toggleA2H1()"><i class=" fas fa-times" id="a2h1"></td>
-                            <td class="axie2" onclick="toggleA2H2()"><i class=" fas fa-times" id="a2h2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie2">Espalda</td>
-                            <td class="axie2" onclick="toggleA2B1()"><i class=" fas fa-times" id="a2b1"></td>
-                            <td class="axie2" onclick="toggleA2B2()"><i class=" fas fa-times" id="a2b2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie2">Cola</td>
-                            <td class="axie2" onclick="toggleA2T1()"><i class=" fas fa-times" id="a2t1"></td>
-                            <td class="axie2" onclick="toggleA2T2()"><i class=" fas fa-times" id="a2t2"></td>
-                        </tr>
-                    </div>
-
-                    <div>
-                        <tr>
-                            <td class="axie3">Boca</td>
-                            <td class="axie3" onclick="toggleA3M1()"><i class=" fas fa-times" id="a3m1"></i></td>
-                            <td class="axie3" onclick="toggleA3M2()"><i class="fas fa-times" id="a3m2"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="axie3">Cuerno</td>
-                            <td class="axie3" onclick="toggleA3H1()"><i class=" fas fa-times" id="a3h1"></td>
-                            <td class="axie3" onclick="toggleA3H2()"><i class=" fas fa-times" id="a3h2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie3">Espalda</td>
-                            <td class="axie3" onclick="toggleA3B1()"><i class=" fas fa-times" id="a3b1"></td>
-                            <td class="axie3" onclick="toggleA3B2()"><i class=" fas fa-times" id="a3b2"></td>
-                        </tr>
-                        <tr>
-                            <td class="axie3">Cola</td>
-                            <td class="axie3" onclick="toggleA3T1()"><i class=" fas fa-times" id="a3t1"></td>
-                            <td class="axie3" onclick="toggleA3T2()"><i class=" fas fa-times" id="a3t2"></td>
-                        </tr>
-                    </div>
-                </tbody>
-            </table>
-
-            <div class="clear-checkboxes">
-                <button onclick="uncheckAll()">MEZCLAR CARTAS</button>
-                <script src="assets/js/table.js"></script>
-            </div>
-        </div>
-    </div>
-
-
-    <footer>
-        <p>
-            <i class="fab fa-github fa-lg"><a href="https://github.com/jmarcosg">&nbsp;Github</a></i>
-        </p>
-    </footer>
+        <footer>
+            <p>
+                <i class="fab fa-github fa-lg"><a href="https://github.com/jmarcosg">&nbsp;Github</a></i>
+            </p>
+        </footer>
 </body>
 
 </html>

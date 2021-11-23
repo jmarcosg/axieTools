@@ -10,7 +10,7 @@
 .TOC-container {
   margin-top: 15px;
   margin: 0 auto;
-  width: 1380px;
+  width: 1200px;
   height: auto;
 }
 
@@ -18,7 +18,7 @@
   padding: 2px;
   margin-left: 10px;
   width: 400px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
 
   color: #2c1c0e;
@@ -36,7 +36,7 @@
 .how-to {
   margin-left: 30px;
   width: 1380px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
 
   color: #2c1c0e;
@@ -46,7 +46,7 @@
   margin-top: 25px;
   margin-left: 30px;
   width: 1380px;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
 
   color: #2c1c0e;
