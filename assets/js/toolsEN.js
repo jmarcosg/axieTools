@@ -144,14 +144,14 @@ function axie1ColorAndParts() {
       document.getElementById("a1t").src = "../../img/parts/bug/tail.svg";
       break;
     case "dawn":
-      document.getElementById("axie1Grid").style.backgroundColor = "#009091";
+      document.getElementById("axie1Grid").style.backgroundColor = "#b9cefc";
       document.getElementById("a1m").src = "../../img/parts/aqua/mouth.svg";
       document.getElementById("a1h").src = "../../img/parts/aqua/horn.svg";
       document.getElementById("a1b").src = "../../img/parts/aqua/back.svg";
       document.getElementById("a1t").src = "../../img/parts/aqua/tail.svg";
       break;
     case "dusk":
-      document.getElementById("axie1Grid").style.backgroundColor = "#b9cefc";
+      document.getElementById("axie1Grid").style.backgroundColor = "#009091";
       document.getElementById("a1m").src = "../../img/parts/reptile/mouth.svg";
       document.getElementById("a1h").src = "../../img/parts/reptile/horn.svg";
       document.getElementById("a1b").src = "../../img/parts/reptile/back.svg";
@@ -217,14 +217,14 @@ function axie2ColorAndParts() {
       document.getElementById("a2t").src = "../../img/parts/bug/tail.svg";
       break;
     case "dawn":
-      document.getElementById("axie2Grid").style.backgroundColor = "#009091";
+      document.getElementById("axie2Grid").style.backgroundColor = "#b9cefc";
       document.getElementById("a2m").src = "../../img/parts/aqua/mouth.svg";
       document.getElementById("a2h").src = "../../img/parts/aqua/horn.svg";
       document.getElementById("a2b").src = "../../img/parts/aqua/back.svg";
       document.getElementById("a2t").src = "../../img/parts/aqua/tail.svg";
       break;
     case "dusk":
-      document.getElementById("axie2Grid").style.backgroundColor = "#b9cefc";
+      document.getElementById("axie2Grid").style.backgroundColor = "#009091";
       document.getElementById("a2m").src = "../../img/parts/reptile/mouth.svg";
       document.getElementById("a2h").src = "../../img/parts/reptile/horn.svg";
       document.getElementById("a2b").src = "../../img/parts/reptile/back.svg";
@@ -290,14 +290,14 @@ function axie3ColorAndParts() {
       document.getElementById("a3t").src = "../../img/parts/bug/tail.svg";
       break;
     case "dawn":
-      document.getElementById("axie3Grid").style.backgroundColor = "#009091";
+      document.getElementById("axie3Grid").style.backgroundColor = "#b9cefc";
       document.getElementById("a3m").src = "../../img/parts/aqua/mouth.svg";
       document.getElementById("a3h").src = "../../img/parts/aqua/horn.svg";
       document.getElementById("a3b").src = "../../img/parts/aqua/back.svg";
       document.getElementById("a3t").src = "../../img/parts/aqua/tail.svg";
       break;
     case "dusk":
-      document.getElementById("axie3Grid").style.backgroundColor = "#b9cefc";
+      document.getElementById("axie3Grid").style.backgroundColor = "#009091";
       document.getElementById("a3m").src = "../../img/parts/reptile/mouth.svg";
       document.getElementById("a3h").src = "../../img/parts/reptile/horn.svg";
       document.getElementById("a3b").src = "../../img/parts/reptile/back.svg";

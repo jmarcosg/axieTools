@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="github.com/jmarcosg">
+    <meta name="description" content="Varias herramientas para Axie Infinity">
+
+    <title>Axie Tools</title>
+
+    <!--icons-->
+    <link rel="icon" type="image/png" href="../../img/kotaro.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="uncheckAll()">
+    <div class="nav-bar">
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Inicio</a>
+            <a href="../ES/about.html">Cómo funciona</a>
+            <a href="../ES/contact.html">Contacto</a>
+            <div class="dropdown">
+                <button class="dropbtn">Opciones
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../EN/index.html">Cambiar a Inglés</a>
+                    <a href="../../../index.html">V2.0</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <script src="../../js/menu.js"></script>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="calculator-container">
+            <div class="round-container">
+                <span class="round-info">Ronda&nbsp;</span><span id="roundNumber" class="round-number">1</span><br>
+                <img src="../../img/energy.png">
+
+                <div class="energy-quantity">
+                    <span id="energyQuantity">3</span><span>/10</span>
+                </div>
+            </div>
+
+            <div class="ene-gain-loss-container">
+                <div class="eneCalc-item">
+                    <button onclick="subtract()">-1 ENE</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="add()">+1 ENE</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="nextRound()">SIGUIENTE RONDA</button>
+                </div>
+
+                <div class="eneCalc-item">
+                    <button onclick="reset()">NUEVA PARTIDA</button>
+                </div>
+            </div>
+            <script src="energyCalculator.js"></script>
+        </div>
+
+        <div class="cards-and-parts-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="table-header">Parte</th>
+                        <th class="table-header">Primer Aparición</th>
+                        <th class="table-header">Segunda Aparición</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <div>
+                        <tr>
+                            <td class="axie1">Boca</td>
+                            <td class="axie1" onclick="toggleA1M1()"><i class=" fas fa-times" id="a1m1"></i></td>
+                            <td class="axie1" onclick="toggleA1M2()"><i class="fas fa-times" id="a1m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Cuerno</td>
+                            <td class="axie1" onclick="toggleA1H1()"><i class=" fas fa-times" id="a1h1"></td>
+                            <td class="axie1" onclick="toggleA1H2()"><i class=" fas fa-times" id="a1h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Espalda</td>
+                            <td class="axie1" onclick="toggleA1B1()"><i class=" fas fa-times" id="a1b1"></td>
+                            <td class="axie1" onclick="toggleA1B2()"><i class=" fas fa-times" id="a1b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie1">Cola</td>
+                            <td class="axie1" onclick="toggleA1T1()"><i class=" fas fa-times" id="a1t1"></td>
+                            <td class="axie1" onclick="toggleA1T2()"><i class=" fas fa-times" id="a1t2"></td>
+                        </tr>
+                    </div>
+
+                    <div>
+                        <tr>
+                            <td class="axie2">Boca</td>
+                            <td class="axie2" onclick="toggleA2M1()"><i class=" fas fa-times" id="a2m1"></i></td>
+                            <td class="axie2" onclick="toggleA2M2()"><i class="fas fa-times" id="a2m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Cuerno</td>
+                            <td class="axie2" onclick="toggleA2H1()"><i class=" fas fa-times" id="a2h1"></td>
+                            <td class="axie2" onclick="toggleA2H2()"><i class=" fas fa-times" id="a2h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Espalda</td>
+                            <td class="axie2" onclick="toggleA2B1()"><i class=" fas fa-times" id="a2b1"></td>
+                            <td class="axie2" onclick="toggleA2B2()"><i class=" fas fa-times" id="a2b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie2">Cola</td>
+                            <td class="axie2" onclick="toggleA2T1()"><i class=" fas fa-times" id="a2t1"></td>
+                            <td class="axie2" onclick="toggleA2T2()"><i class=" fas fa-times" id="a2t2"></td>
+                        </tr>
+                    </div>
+
+                    <div>
+                        <tr>
+                            <td class="axie3">Boca</td>
+                            <td class="axie3" onclick="toggleA3M1()"><i class=" fas fa-times" id="a3m1"></i></td>
+                            <td class="axie3" onclick="toggleA3M2()"><i class="fas fa-times" id="a3m2"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Cuerno</td>
+                            <td class="axie3" onclick="toggleA3H1()"><i class=" fas fa-times" id="a3h1"></td>
+                            <td class="axie3" onclick="toggleA3H2()"><i class=" fas fa-times" id="a3h2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Espalda</td>
+                            <td class="axie3" onclick="toggleA3B1()"><i class=" fas fa-times" id="a3b1"></td>
+                            <td class="axie3" onclick="toggleA3B2()"><i class=" fas fa-times" id="a3b2"></td>
+                        </tr>
+                        <tr>
+                            <td class="axie3">Cola</td>
+                            <td class="axie3" onclick="toggleA3T1()"><i class=" fas fa-times" id="a3t1"></td>
+                            <td class="axie3" onclick="toggleA3T2()"><i class=" fas fa-times" id="a3t2"></td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+
+            <div class="clear-checkboxes">
+                <button onclick="uncheckAll()">MEZCLAR CARTAS</button>
+                <script src="table.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>
+            <i class="fab fa-github fa-lg"><a href="https://github.com/jmarcosg">&nbsp;Github</a></i>
+        </p>
+    </footer>
+</body>
+
+</html>
