@@ -127,35 +127,44 @@
   color: #fff;
 }
 
-.cnc-container {
-  display: flex;
-  margin-top: 15px;
-}
-
 /* Cards */
-.cards-container {
-  display: flex;
-  position: relative;
-  margin-top: 15px;
-  text-align: start;
-  padding-left: 80px;
-}
-.cards-container img {
-  width: 85px;
-  height: 100px;
-  margin-top: 10%;
-  opacity: 85%;
+.cnc-container {
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 4px solid #5d330b;
+  background-color: #8f5656;
 }
 
-.cards-container span {
+.cnc-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cnc-grid-item {
+  padding: 0.5rem;
+}
+
+.enemy-cards {
+  width: 60px;
+  height: 75px;
+  margin-left: 30px;
+}
+
+.current-cards {
   position: absolute;
   font-size: 36px;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-weight: 600;
-  margin-left: 20%;
-  margin-top: 22%;
+  margin-top: 15px;
+  margin-left: 17px;
   background: #0000002d;
-  width: 35px;
+  width: 45px;
   border-radius: 4px;
 
   color: white;
@@ -163,16 +172,12 @@
   -webkit-text-stroke-color: #5d330b;
 }
 
-.cards-buttons {
-  display: grid;
-}
-
 .cards-buttons button {
   cursor: pointer;
   height: 45px;
-  width: 75px;
+  width: 140px;
   border-radius: 4px 4px 4px 4px;
-  margin-left: 15px;
+  margin-left: 20px;
 
   font-family: "Inter", sans-serif;
   font-size: 12px;
@@ -183,31 +188,71 @@
   border: 3px solid #5d330b;
 }
 
-.minus-card {
+.minus-card button {
   background-color: #f13232;
   text-shadow: 1px 1px 2px #5d330b;
   color: #ffffff;
 }
 
-.minus-card:hover {
+.minus-card button:hover {
   background-color: #f14747;
   color: #fff;
 }
 
-.plus-card {
+.minus-card span {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 12px;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  background: #0000002d;
+  width: 45px;
+  border-radius: 4px;
+
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5d330b;
+}
+
+.plus-card button {
   background-color: #58c02d;
   color: #ffffff;
 }
 
-.plus-card:hover {
-  background-color: #63c23a;
+.plus-card button:hover {
+  background-color: #52a130;
   color: #ffffff;
 }
 
+.plus-card span {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 12px;
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  background: #0000002d;
+  width: 45px;
+  border-radius: 4px;
+
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5d330b;
+}
+
 /* Calculator */
+.calc-icon {
+  width: 45px;
+}
+
 #modalBtn {
-  margin-top: 55%;
-  margin-left: 120%;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 5px;
   background: none;
   width: 65px;
   height: 75px;
@@ -310,7 +355,7 @@
 /* Parts */
 .parts-container {
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0px;
   border-radius: 5px;
   box-sizing: border-box;
@@ -524,7 +569,7 @@
 /* responsive */
 @media screen and (max-width: 600px) {
   .round-info {
-    width: 120px;
+    width: 140px;
   }
 
   .round-info span {
@@ -548,7 +593,7 @@
 
   .parts-container {
     display: block;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0px;
     border-radius: 5px;
     box-sizing: border-box;
