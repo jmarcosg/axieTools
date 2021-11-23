@@ -59,17 +59,15 @@ function reset(){
   document.body.style.backgroundColor = "#c07f5aad";
   counter = 3;
   roundNumber = 1;
-  initCards = 6;
+  currentCardsCounter = 6;
   
   document.getElementById("actualEnergy").innerHTML = counter;
   document.getElementById("roundNumber").innerHTML = roundNumber;
-  document.getElementById("currentCards").innerHTML = initCards;
+  document.getElementById("currentCards").innerHTML = currentCardsCounter;
   
   resetA1Parts();
   resetA2Parts();
-  resetA3Parts();
-  
-  location.reload(); 
+  resetA3Parts(); 
 }
 
 /**
