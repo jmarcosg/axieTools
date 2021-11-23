@@ -2,6 +2,7 @@
   margin-top: 15px;
   margin-left: 25px;
   margin-right: 25px;
+  width: fit-content;
   font-size: 17px;
   font-style: italic;
   text-align: center;
@@ -10,14 +11,13 @@
 .TOC-container {
   margin-top: 15px;
   margin: 0 auto;
-  width: 1200px;
   height: auto;
 }
 
 .table-of-contents {
   padding: 2px;
   margin-left: 10px;
-  width: 400px;
+  width: 300px;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
 
@@ -35,7 +35,7 @@
 
 .how-to {
   margin-left: 30px;
-  width: 1380px;
+  width: fit-content;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
 
@@ -45,7 +45,7 @@
 .patch-notes {
   margin-top: 25px;
   margin-left: 30px;
-  width: 1380px;
+  width: fit-content;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
 

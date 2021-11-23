@@ -180,7 +180,7 @@
   margin-left: 20px;
 
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   text-shadow: 1px 1px 2px #5d330b;
@@ -573,7 +573,7 @@
   }
 
   .round-info span {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .energy-quantity {
@@ -587,13 +587,39 @@
   }
 
   .energy-quantity img {
-    height: 65px;
-    width: 65px;
+    height: 45px;
+    width: 45px;
+  }
+  .energy-tools button {
+    width: 140px;
+    margin: 2px 2px 0;
+    font-size: 14px;
+  }
+
+  .cnc-container {
+    margin-top: 5px;
+  }
+
+  .current-cards {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+  .cards-buttons button {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  #modalBtn {
+    margin-top: 45px;
+    margin-left: 20px;
   }
 
   .parts-container {
     display: block;
-    margin-top: 1rem;
+    margin-top: 4px;
     padding: 0px;
     border-radius: 5px;
     box-sizing: border-box;
