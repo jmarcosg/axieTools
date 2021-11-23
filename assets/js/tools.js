@@ -46,7 +46,7 @@ function nextRound(){
   if (currentCardsCounter >= 12) {
     currentCardsCounter = 12;
   }
-  if (currentCardsCounter <= 3) {
+  if (currentCardsCounter <= 0) {
     currentCardsCounter = 3;
   }
   
@@ -86,8 +86,8 @@ function addCard() {
 function minusCard() {
   currentCardsCounter -= 1;
   
-  if (currentCardsCounter <= 3) {
-    currentCardsCounter = 3;
+  if (currentCardsCounter <= 0) {
+    currentCardsCounter = 0;
   }
   
   document.getElementById("currentCards").innerHTML = currentCardsCounter;
