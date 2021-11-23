@@ -70,3 +70,31 @@
 .gain-container {
   margin: 0 auto;
 }
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .round-info {
+    font-size: 22px;
+  }
+
+  .round-number {
+    font-size: 22px;
+  }
+
+  .round-container img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .energy-quantity {
+    font-size: 22px;
+  }
+
+  .ene-gain-loss-container {
+    max-width: 350px;
+  }
+
+  /* .ene-gain-loss-container button {
+      
+    } */
+}
