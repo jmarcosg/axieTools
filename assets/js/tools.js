@@ -1,11 +1,17 @@
-// Energy and round functions
 var counter = document.getElementById("actualEnergy");
 counter = 3;
 var round = document.getElementById("roundNumber");
 roundNumber = 1;
 
+var currentCardsCounter = document.getElementById("currentCards");
+currentCardsCounter = 6;
+
+/**
+ * Energy-round functions
+ */
 function subtract(){
   counter -= 1;
+  
   if (counter <= 0) {
     counter = 0;
   }
@@ -15,32 +21,76 @@ function subtract(){
 
 function add(){
   counter += 1;
+  
   if (counter >= 10) {
     counter = 10;
   }
   document.getElementById("actualEnergy").innerHTML = counter;
 }
 
+function nextRound(){
+  roundNumber += 1;
+  counter += 2;
+  currentCardsCounter += 3;
+  
+  if (counter >= 10) {
+    counter = 10;
+  }
+  
+  if (roundNumber >= 10) {
+    document.body.style.backgroundColor = "#b52930ad";
+  } else {
+    document.body.style.backgroundColor = "#c07f5aad";
+  }
+  
+  if (currentCardsCounter >= 12) {
+    currentCardsCounter = 12;
+  }
+  if (currentCardsCounter <= 3) {
+    currentCardsCounter = 3;
+  }
+  
+  document.getElementById("roundNumber").innerHTML = roundNumber;
+  document.getElementById("actualEnergy").innerHTML = counter;
+  document.getElementById("currentCards").innerHTML = currentCardsCounter;
+}
+
 function reset(){
+  document.body.style.backgroundColor = "#c07f5aad";
   counter = 3;
   roundNumber = 1;
+  initCards = 6;
+  
   document.getElementById("actualEnergy").innerHTML = counter;
   document.getElementById("roundNumber").innerHTML = roundNumber;
+  document.getElementById("currentCards").innerHTML = initCards;
   
   resetA1Parts();
   resetA2Parts();
   resetA3Parts();
 }
 
-function nextRound(){
-  roundNumber += 1;
-  counter += 2;
-  if (counter >= 10) {
-    counter = 10;
+/**
+ * Cards functions
+ */
+function addCard() {
+  currentCardsCounter += 1;
+  
+  if (currentCardsCounter >= 12) {
+    currentCardsCounter = 12;
   }
   
-  document.getElementById("roundNumber").innerHTML = roundNumber;
-  document.getElementById("actualEnergy").innerHTML = counter;
+  document.getElementById("currentCards").innerHTML = currentCardsCounter;
+}
+
+function minusCard() {
+  currentCardsCounter -= 1;
+  
+  if (currentCardsCounter <= 3) {
+    currentCardsCounter = 3;
+  }
+  
+  document.getElementById("currentCards").innerHTML = currentCardsCounter;
 }
 
 /**
@@ -752,136 +802,6 @@ buttons.forEach((btn) => {
             answerScreen.innerHTML = 0;
         }
     });
-});
-
-/** CARD TRACKER */
-function showCardOptions(){ 
-  $(".card-tracker-wrapper").slideDown("fast");
-}
-
-function hideCardOptions(){ 
-  $(".card-tracker-wrapper").slideUp("fast");
-}
-
-
-function addCard(){
-  card = card + 1;
-  $("#card-txt").text(card);
-}
-
-function minusCard(){
-  card = card - 1;
-  if(card <= 0)
-      card = 0;
-  $("#card-txt").text(card);
-}
-
-
-function addUsedCard(){
-  cardUsed = cardUsed + 1;
-  $('#card-used-label').text(cardUsed);
-}
-
-function minusUsedCard(){
-  cardUsed = cardUsed - 1;
-  if(cardUsed <= 0)
-      cardUsed = 0;
-  $('#card-used-label').text(cardUsed);
-}
-
-function addDrawCard(){
-  cardDraw = cardDraw + 1;
-  $('#card-draw-label').text(cardDraw);
-}
-
-function minusDrawCard(){
-  cardDraw = cardDraw - 1;
-  if(cardDraw <= 0)
-      cardDraw = 0;
-  $('#card-draw-label').text(cardDraw);
-}
-
-function addDiscardCard(){
-  cardDiscard = cardDiscard + 1;
-  $('#card-discard-label').text(cardDiscard);
-}
-
-function minusDiscardCard(){
-  cardDiscard = cardDiscard - 1;
-  if(cardDiscard <= 0)
-      cardDiscard = 0;
-  $('#card-discard-label').text(cardDiscard);
-}
-
-function initializeCard(){
-  cardDraw = 0;
-  cardUsed = 0;
-  cardDiscard = 0;
-
-  $("#card-used-label").text(card);
-  $("#card-draw-label").text(card);
-  $("#card-discard-label").text(card);
-}
-
-function calculateCard(){
-  /** CARD FUNCTIONS */
-  currentCard = ( currentCard - cardUsed + cardDraw - cardDiscard ) + 3;
-  if(currentCard >= 12)
-      currentCard = 12;
-
-  if(currentCard <= 3)
-      currentCard = 3;
-
-  $("#current-card").text(currentCard);
-  initializeCard();
-
-}
-
-
-//Used Card
-
-$("#card-used-label").click(function(){
-  minusUsedCard();
-});
-$("#card-used-icon").click(function(){
-  
-  addUsedCard();
-});
-
-
-//Draw Card
-$("#card-draw-label").click(function(){
-  minusDrawCard();
-});
-$("#card-draw-icon").click(function(){
-  addDrawCard();
-});
-
-
-//Discard Card
-$("#card-discard-label").click(function(){
-  minusDiscardCard();
-});
-$("#card-discard-icon").click(function(){
-  
-  addDiscardCard();
-});
-
-
-$("#current-card").click(function() { 
-  return (this.tog = !this.tog) ? showCardOptions() : hideCardOptions();
-});
-
-$("#card-tracker-close").click(function() { 
-  hideCardOptions();
-});
-
-$('#card-plus-icon').click(function(){
-  addCard();
-});
-
-$('#card-minus-icon').click(function(){
-  minusCard();
 });
 
 
