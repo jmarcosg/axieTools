@@ -188,3 +188,20 @@ th {
   background-color: #bd7847;
   color: #fff;
 }
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .cards-and-parts-container table {
+    margin: auto;
+    border-collapse: collapse;
+    font-weight: bold;
+    text-align: center;
+    max-width: 350px;
+    max-height: 500px;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+  }
+}
