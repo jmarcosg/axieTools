@@ -68,6 +68,8 @@ function reset(){
   resetA1Parts();
   resetA2Parts();
   resetA3Parts();
+  
+  location.reload(); 
 }
 
 /**
