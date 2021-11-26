@@ -5,7 +5,7 @@
 html,
 body {
   margin: 0 auto;
-  /* height: 100vh; */
+  height: 100vh;
   font-family: "Inter", sans-serif;
   color: #432d17;
   background-color: #c07f5aad;
